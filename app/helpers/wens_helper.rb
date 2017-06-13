@@ -1,0 +1,2 @@
+module WensHelper
+end
