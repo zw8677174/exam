@@ -1,18 +1,16 @@
 class PapersController < ApplicationController
-
   def index
-
+	@papers = Paper.all
   end
 
   def create
     @paper = Paper.new(paper_params)
-    @paper.user_id = User.find(params[:user_id]).id
     @paper.save
-    redirect_to user_paper_url(:id=>params[:user_id])
+    redirect_to @paper
   end
 
   def new
-    @user = User.find(params[:user_id])
+	@paper = Paper.new
   end
 
   def show

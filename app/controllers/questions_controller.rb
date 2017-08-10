@@ -1,21 +1,25 @@
 class QuestionsController < ApplicationController
-  def new
-    @user = User.find(params[:user_id])
-  end
+	def index
+		@questions = Paper.find(params[:paper_id]).questions
+	end
 
-  def create
-    @question = Question.new(question_params)
-    @question.user_id = params[:user_id]
-    @question.save
-    redirect_to user_question_url(:id=>@question.id)
-  end
+	def new
+   		@paper = Paper.find(params[:paper_id])
+  	end
 
-  def show
-    @question = Question.find(params[:id])
-  end
+  	def create
+		@paper = Paper.find(params[:paper_id])
+		@quesiton = @paper.questions.create(question_params)
+		redirect_to @paper.question.find(@question.id)
 
-  private
-    def question_params
-      params.require(:question).permit(:title, :tag, :body, :answer)
-    end
+	end
+
+  	def show
+		@question = Question.find(params[:id])
+  	end
+
+  	private
+    	def question_params
+      	params.require(:question).permit(:title, :tag, :body, :answer, :paper_id)
+    	end
 end

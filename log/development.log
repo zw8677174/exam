@@ -4057,3 +4057,2963 @@ Processing by PapersController#show as HTML
 Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-08-03 22:53:44 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/zw/.rvm/gems/ruby-2.4.0/gems/railties-5.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/zw/.rvm/gems/ruby-2.4.0/gems/railties-5.1.1/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 17ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-08-03 22:53:52 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/" for 127.0.0.1 at 2017-08-03 22:58:32 +0800
+Processing by UsersController#index as HTML
+Completed 406 Not Acceptable in 7ms
+
+
+  
+ActionController::UnknownFormat (UsersController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.1) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.1) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.1) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.1) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.1) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.1) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.1) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.1) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.1) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/1" for 127.0.0.1 at 2017-08-03 22:58:46 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 478ms (Views: 459.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/1/questions" for 127.0.0.1 at 2017-08-04 08:47:26 +0800
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for QuestionsController):
+  
+actionpack (5.1.1) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.1) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.1) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/1/exam" for 127.0.0.1 at 2017-08-04 08:47:38 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/exam"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/1/questions" for 127.0.0.1 at 2017-08-04 08:47:59 +0800
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for QuestionsController):
+  
+actionpack (5.1.1) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.1) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.1) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-08-05 03:33:22 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/zw/.rvm/gems/ruby-2.4.0/gems/railties-5.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/zw/.rvm/gems/ruby-2.4.0/gems/railties-5.1.1/lib/rails/templates/rails/welcome/index.html.erb (1.6ms)
+Completed 200 OK in 4ms (Views: 2.7ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-08-05 03:35:29 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html within layouts/application
+  Rendered papers/index.html within layouts/application (0.4ms)
+Completed 200 OK in 25ms (Views: 20.4ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePapers (20170613082109)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (5.6ms)[0m  [1m[35mDROP TABLE "papers"[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20170613082109"]]
+  [1m[35m (594.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_questions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_questions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateQuestions (20170613080943)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE "questions"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20170613080943"]]
+  [1m[35m (36.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20170613070139)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20170613070139"]]
+  [1m[35m (38.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20170613070139)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170613070139"]]
+  [1m[35m (20.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateQuestions (20170613080943)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" text, "tag" varchar, "body" text, "answer" text, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_047ab75908"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_questions_on_user_id" ON "questions" ("user_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170613080943"]]
+  [1m[35m (66.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePapers (20170613082109)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "papers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "title" text, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170613082109"]]
+  [1m[35m (71.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_questions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_questions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePapers (20170613082109)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE "papers"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20170613082109"]]
+  [1m[35m (43.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_questions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_questions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateQuestions (20170613080943)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "questions"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20170613080943"]]
+  [1m[35m (67.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20170613070139)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20170613070139"]]
+  [1m[35m (44.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20170613070139)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170613070139"]]
+  [1m[35m (37.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateQuestions (20170613080943)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" text, "tag" varchar, "body" text, "answer" text, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_047ab75908"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_questions_on_user_id" ON "questions" ("user_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170613080943"]]
+  [1m[35m (46.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePapers (20170613082109)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "papers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "title" text, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170613082109"]]
+  [1m[35m (59.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_questions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_questions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePapers (20170613082109)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "papers"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20170613082109"]]
+  [1m[35m (33.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_questions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_questions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePapers (20170613082109)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "papers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "title" text, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170613082109"]]
+  [1m[35m (37.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_questions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_questions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePapers (20170613082109)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "papers"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20170613082109"]]
+  [1m[35m (33.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_questions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_questions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateQuestions (20170613080943)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "questions"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20170613080943"]]
+  [1m[35m (17.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20170613070139)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20170613070139"]]
+  [1m[35m (88.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20170613070139)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170613070139"]]
+  [1m[35m (44.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateQuestions (20170613080943)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" text, "tag" varchar, "body" text, "answer" text, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_047ab75908"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_questions_on_user_id" ON "questions" ("user_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170613080943"]]
+  [1m[35m (57.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePapers (20170613082109)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "papers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "title" text, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170613082109"]]
+  [1m[35m (78.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_questions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_questions_on_user_id' AND type='index'
+[0m
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 15:37:36 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PapersController#index as HTML
+  Rendering papers/index.html within layouts/application
+  Rendered papers/index.html within layouts/application (0.6ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers/new" for 127.0.0.1 at 2017-08-05 15:37:47 +0800
+Processing by PapersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 8ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  
+app/controllers/papers_controller.rb:14:in `new'
+Started GET "/papers/new" for 127.0.0.1 at 2017-08-05 15:39:09 +0800
+Processing by PapersController#new as HTML
+  Rendering papers/new.html.erb within layouts/application
+  Rendered papers/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 3ms
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for(@paper) do |f| %>
+    2:     <p>
+    3:       <%= f.label :name %><br>
+    4:       <%= f.text_field :name %>
+  
+app/views/papers/new.html.erb:1:in `_app_views_papers_new_html_erb__1125999807943031172_69816846528640'
+Started GET "/papers/new" for 127.0.0.1 at 2017-08-05 15:39:10 +0800
+Processing by PapersController#new as HTML
+  Rendering papers/new.html.erb within layouts/application
+  Rendered papers/new.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 3ms
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for(@paper) do |f| %>
+    2:     <p>
+    3:       <%= f.label :name %><br>
+    4:       <%= f.text_field :name %>
+  
+app/views/papers/new.html.erb:1:in `_app_views_papers_new_html_erb__1125999807943031172_69817042597200'
+Started GET "/papers/new" for 127.0.0.1 at 2017-08-05 15:39:10 +0800
+Processing by PapersController#new as HTML
+  Rendering papers/new.html.erb within layouts/application
+  Rendered papers/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 3ms
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for(@paper) do |f| %>
+    2:     <p>
+    3:       <%= f.label :name %><br>
+    4:       <%= f.text_field :name %>
+  
+app/views/papers/new.html.erb:1:in `_app_views_papers_new_html_erb__1125999807943031172_43016200'
+Started GET "/papers/new" for 127.0.0.1 at 2017-08-05 15:39:10 +0800
+Processing by PapersController#new as HTML
+  Rendering papers/new.html.erb within layouts/application
+  Rendered papers/new.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 4ms
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for(@paper) do |f| %>
+    2:     <p>
+    3:       <%= f.label :name %><br>
+    4:       <%= f.text_field :name %>
+  
+app/views/papers/new.html.erb:1:in `_app_views_papers_new_html_erb__1125999807943031172_69816858158340'
+Started GET "/papers/new" for 127.0.0.1 at 2017-08-05 15:40:12 +0800
+Processing by PapersController#new as HTML
+  Rendering papers/new.html.erb within layouts/application
+  Rendered papers/new.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 38ms (Views: 30.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/papers/new" for 127.0.0.1 at 2017-08-05 15:40:23 +0800
+Processing by PapersController#new as HTML
+  Rendering papers/new.html.erb within layouts/application
+  Rendered papers/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/papers" for 127.0.0.1 at 2017-08-05 15:40:28 +0800
+Processing by PapersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nuaW8SYQp9gEaARrglIJMl6O6vwqFMUxHPe33sUbx1N6IuOCGj9emCwB3RmTIlZXzQ8BVoTjsjZi3KOxalkRug==", "paper"=>{"name"=>"12", "title"=>"12", "description"=>"12"}, "commit"=>"Create Paper"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 5ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  
+app/controllers/papers_controller.rb:8:in `create'
+Started POST "/papers" for 127.0.0.1 at 2017-08-05 15:41:33 +0800
+Processing by PapersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nuaW8SYQp9gEaARrglIJMl6O6vwqFMUxHPe33sUbx1N6IuOCGj9emCwB3RmTIlZXzQ8BVoTjsjZi3KOxalkRug==", "paper"=>{"name"=>"12", "title"=>"12", "description"=>"12"}, "commit"=>"Create Paper"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 13ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  
+app/controllers/papers_controller.rb:8:in `create'
+Started POST "/papers" for 127.0.0.1 at 2017-08-05 15:41:47 +0800
+Processing by PapersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nuaW8SYQp9gEaARrglIJMl6O6vwqFMUxHPe33sUbx1N6IuOCGj9emCwB3RmTIlZXzQ8BVoTjsjZi3KOxalkRug==", "paper"=>{"name"=>"12", "title"=>"12", "description"=>"12"}, "commit"=>"Create Paper"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  
+app/controllers/papers_controller.rb:8:in `create'
+Started GET "/papers/new" for 127.0.0.1 at 2017-08-05 15:41:56 +0800
+Processing by PapersController#new as HTML
+  Rendering papers/new.html.erb within layouts/application
+  Rendered papers/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/papers" for 127.0.0.1 at 2017-08-05 15:41:58 +0800
+Processing by PapersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z4fczXtIaq/XYLSc/rGXKRdmxR3ZMZWl0RwA+6MPm28rQ6m+R2eT7/8Jbe7vwchMhOcut3fG4qKvNxSUDE1Nhg==", "paper"=>{"name"=>"12", "title"=>"12", "description"=>"12"}, "commit"=>"Create Paper"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  
+app/controllers/papers_controller.rb:8:in `create'
+Started POST "/papers" for 127.0.0.1 at 2017-08-05 15:42:09 +0800
+Processing by PapersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z4fczXtIaq/XYLSc/rGXKRdmxR3ZMZWl0RwA+6MPm28rQ6m+R2eT7/8Jbe7vwchMhOcut3fG4qKvNxSUDE1Nhg==", "paper"=>{"name"=>"12", "title"=>"12", "description"=>"12"}, "commit"=>"Create Paper"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "papers" ("name", "title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "12"], ["title", "12"], ["description", "12"], ["created_at", "2017-08-05 07:42:09.247877"], ["updated_at", "2017-08-05 07:42:09.247877"]]
+  [1m[35m (48.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/papers/1
+Completed 302 Found in 63ms (ActiveRecord: 49.4ms)
+
+
+Started GET "/papers/1" for 127.0.0.1 at 2017-08-05 15:42:09 +0800
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering papers/show.html.erb within layouts/application
+  Rendered papers/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 94ms (Views: 35.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 15:49:43 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html within layouts/application
+  Rendered papers/index.html within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 20.1ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 15:53:35 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html within layouts/application
+  Rendered papers/index.html within layouts/application (0.2ms)
+Completed 200 OK in 14ms (Views: 10.5ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 15:54:57 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html within layouts/application
+  Rendered papers/index.html within layouts/application (0.5ms)
+Completed 200 OK in 13ms (Views: 11.9ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 15:54:58 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html within layouts/application
+  Rendered papers/index.html within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 12.8ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 15:55:15 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html within layouts/application
+  Rendered papers/index.html within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 12.8ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 15:55:16 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html within layouts/application
+  Rendered papers/index.html within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.0ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 15:55:16 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html within layouts/application
+  Rendered papers/index.html within layouts/application (0.7ms)
+Completed 200 OK in 36ms (Views: 34.6ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 15:55:17 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html within layouts/application
+  Rendered papers/index.html within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 11.5ms)
+
+
+Started GET "/papers/1" for 127.0.0.1 at 2017-08-05 15:55:59 +0800
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering papers/show.html.erb within layouts/application
+  Rendered papers/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 34ms (Views: 16.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/papers/1" for 127.0.0.1 at 2017-08-05 15:56:33 +0800
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering papers/show.html.erb within layouts/application
+  Rendered papers/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/1" for 127.0.0.1 at 2017-08-05 15:56:34 +0800
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering papers/show.html.erb within layouts/application
+  Rendered papers/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/papers/1" for 127.0.0.1 at 2017-08-05 15:56:35 +0800
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering papers/show.html.erb within layouts/application
+  Rendered papers/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/1" for 127.0.0.1 at 2017-08-05 15:56:46 +0800
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering papers/show.html.erb within layouts/application
+  Rendered papers/show.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `name1' for #<Paper:0x007eff0155ccb8>
+Did you mean?  name
+               name=
+               name?):
+    1: <p>
+    2:   <strong>Title:</strong>
+    3:   <%= @paper.name1 %>
+    4: </p>
+    5: 
+    6: <p>
+  
+app/views/papers/show.html.erb:3:in `_app_views_papers_show_html_erb___916546317337797434_69816852058080'
+Started GET "/papers/1" for 127.0.0.1 at 2017-08-05 15:56:52 +0800
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering papers/show.html.erb within layouts/application
+  Rendered papers/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 15:58:27 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html within layouts/application
+  Rendered papers/index.html within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 10.5ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 15:58:53 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html within layouts/application
+  Rendered papers/index.html within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 11.2ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 15:58:54 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html within layouts/application
+  Rendered papers/index.html within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 17.9ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 15:58:54 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html within layouts/application
+  Rendered papers/index.html within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 12.7ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 15:58:55 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html within layouts/application
+  Rendered papers/index.html within layouts/application (0.6ms)
+Completed 200 OK in 27ms (Views: 24.8ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-08-05 16:26:50 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html within layouts/application
+  Rendered papers/index.html within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 19.8ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 16:33:43 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html within layouts/application
+  Rendered papers/index.html within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 11.3ms)
+
+
+Started PUT "/__web_console/repl_sessions/e74398d04877e82fc629f019f7c39078" for 127.0.0.1 at 2017-08-05 16:33:49 +0800
+Started PUT "/__web_console/repl_sessions/e74398d04877e82fc629f019f7c39078" for 127.0.0.1 at 2017-08-05 16:33:51 +0800
+Started PUT "/__web_console/repl_sessions/e74398d04877e82fc629f019f7c39078" for 127.0.0.1 at 2017-08-05 16:34:22 +0800
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" LIMIT ?[0m  [["LIMIT", 11]]
+Started PUT "/__web_console/repl_sessions/e74398d04877e82fc629f019f7c39078" for 127.0.0.1 at 2017-08-05 16:34:47 +0800
+  [1m[36mPaper Load (0.4ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Started PUT "/__web_console/repl_sessions/e74398d04877e82fc629f019f7c39078" for 127.0.0.1 at 2017-08-05 16:34:51 +0800
+Started PUT "/__web_console/repl_sessions/e74398d04877e82fc629f019f7c39078" for 127.0.0.1 at 2017-08-05 16:34:52 +0800
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 16:35:06 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html within layouts/application
+  Rendered papers/index.html within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 16:35:07 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html within layouts/application
+  Rendered papers/index.html within layouts/application (0.7ms)
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 16:36:24 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 20ms (Views: 16.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 16:36:34 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 21ms (Views: 16.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 16:36:37 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 16:36:38 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 16:36:38 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 16:36:47 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 16:36:48 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 15ms (Views: 12.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 16:36:48 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 24ms (Views: 12.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 16:36:48 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 16:36:49 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 16:37:00 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 16:37:01 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 16:37:02 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 16:38:04 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 16:44:42 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 16:44:42 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 17ms (Views: 14.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/1" for 127.0.0.1 at 2017-08-05 16:44:45 +0800
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering papers/show.html.erb within layouts/application
+  Rendered papers/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 16:44:50 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.4ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 43ms (Views: 40.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 16:44:50 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 16:44:51 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 16:45:06 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/papers/1" for 127.0.0.1 at 2017-08-05 16:45:09 +0800
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering papers/show.html.erb within layouts/application
+  Rendered papers/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 16:45:27 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 16:45:28 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.6ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 16:45:28 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-05 16:45:28 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 36ms (Views: 33.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-07 23:44:27 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PapersController#index as HTML
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 290ms (Views: 249.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/papers/1" for 127.0.0.1 at 2017-08-07 23:44:29 +0800
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering papers/show.html.erb within layouts/application
+  Rendered papers/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 28ms (Views: 12.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-08 00:18:46 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/papers/1" for 127.0.0.1 at 2017-08-08 00:19:00 +0800
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering papers/show.html.erb within layouts/application
+  Rendered papers/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 44ms (Views: 36.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-08 00:30:32 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/1/edit" for 127.0.0.1 at 2017-08-08 00:30:35 +0800
+Processing by PapersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering papers/edit.html.erb within layouts/application
+  Rendered papers/edit.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/papers/1/edit" for 127.0.0.1 at 2017-08-08 00:46:41 +0800
+Processing by PapersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering papers/edit.html.erb within layouts/application
+  Rendered papers/edit.html.erb within layouts/application (9.2ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @article do |f| %>
+    2:  
+    3: 	<% if @article.errors.any? %>
+    4: 		<div id="error_explanation">
+  
+app/views/papers/edit.html.erb:1:in `_app_views_papers_edit_html_erb__4251013474073380993_36379540'
+Started GET "/papers/1/edit" for 127.0.0.1 at 2017-08-08 00:49:02 +0800
+Processing by PapersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering papers/edit.html.erb within layouts/application
+  Rendered papers/edit.html.erb within layouts/application (76.0ms)
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `text' for #<Paper:0x007efbd849f270>):
+    21:  
+    22: 	<p>
+    23: 		<%= f.label :text %><br>
+    24: 		<%= f.text_area :text %>
+    25: 	</p>
+    26: 	 
+    27: 	<p>
+  
+app/views/papers/edit.html.erb:24:in `block in _app_views_papers_edit_html_erb__4251013474073380993_69810065305500'
+app/views/papers/edit.html.erb:1:in `_app_views_papers_edit_html_erb__4251013474073380993_69810065305500'
+Started GET "/papers/1/edit" for 127.0.0.1 at 2017-08-08 00:49:37 +0800
+Processing by PapersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering papers/edit.html.erb within layouts/application
+  Rendered papers/edit.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/papers/1" for 127.0.0.1 at 2017-08-08 01:11:54 +0800
+Processing by PapersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QKoo5QJr/9xIeu1Ui+kDU+pbeiKoChBazBErZvqnIhOkbl2WPkQGnGATNCaamVw2edqRiAb9Z12yOj8JVeX0+g==", "paper"=>{"title"=>"12", "description"=>"123"}, "commit"=>"Update Paper", "id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "papers" SET "description" = ?, "updated_at" = ? WHERE "papers"."id" = ?[0m  [["description", "123"], ["updated_at", "2017-08-07 17:11:54.123918"], ["id", 1]]
+  [1m[35m (39.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 40.2ms)
+
+
+  
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  
+app/controllers/papers_controller.rb:29:in `update'
+Started PATCH "/papers/1" for 127.0.0.1 at 2017-08-08 01:12:06 +0800
+Processing by PapersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QKoo5QJr/9xIeu1Ui+kDU+pbeiKoChBazBErZvqnIhOkbl2WPkQGnGATNCaamVw2edqRiAb9Z12yOj8JVeX0+g==", "paper"=>{"title"=>"12", "description"=>"123"}, "commit"=>"Update Paper", "id"=>"1"}
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/papers/1
+Completed 302 Found in 23ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/papers/1" for 127.0.0.1 at 2017-08-08 01:12:06 +0800
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering papers/show.html.erb within layouts/application
+  Rendered papers/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-08 01:12:11 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/1/edit" for 127.0.0.1 at 2017-08-08 01:12:14 +0800
+Processing by PapersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering papers/edit.html.erb within layouts/application
+  Rendered papers/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/papers/1" for 127.0.0.1 at 2017-08-08 01:12:45 +0800
+Processing by PapersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mq4SPkszlJDG2WVIquTnM94emM63Bl7dc+uwquR6Kf2URkWoX1dYLVvnwb2yPUAobszwjTjnM63/TUTiCV9fPg==", "paper"=>{"title"=>"12", "description"=>"1234"}, "commit"=>"Update Paper", "id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "papers" SET "description" = ?, "updated_at" = ? WHERE "papers"."id" = ?[0m  [["description", "1234"], ["updated_at", "2017-08-07 17:12:45.904853"], ["id", 1]]
+  [1m[35m (37.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 38.9ms)
+
+
+  
+NoMethodError (undefined method `to_model' for true:TrueClass
+Did you mean?  to_yaml):
+  
+app/controllers/papers_controller.rb:28:in `update'
+Started PUT "/__web_console/repl_sessions/8c56daf3dc1a002cc17b99887647c43c" for 127.0.0.1 at 2017-08-08 01:12:58 +0800
+Started PUT "/__web_console/repl_sessions/8c56daf3dc1a002cc17b99887647c43c" for 127.0.0.1 at 2017-08-08 01:12:59 +0800
+Started PATCH "/papers/1" for 127.0.0.1 at 2017-08-08 01:14:45 +0800
+Processing by PapersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mq4SPkszlJDG2WVIquTnM94emM63Bl7dc+uwquR6Kf2URkWoX1dYLVvnwb2yPUAobszwjTjnM63/TUTiCV9fPg==", "paper"=>{"title"=>"12", "description"=>"1234"}, "commit"=>"Update Paper", "id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/papers/1
+Completed 302 Found in 11ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/papers/1" for 127.0.0.1 at 2017-08-08 01:14:45 +0800
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering papers/show.html.erb within layouts/application
+  Rendered papers/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.1ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePapers (20170613082109)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "papers"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20170613082109"]]
+  [1m[35m (133.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_questions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_questions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateQuestions (20170613080943)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "questions"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20170613080943"]]
+  [1m[35m (43.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20170613070139)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20170613070139"]]
+  [1m[35m (31.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateQuestions (20170613080943)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" text, "tag" varchar, "body" text, "answer" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170613080943"]]
+  [1m[35m (43.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePapers (20170613082109)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "papers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "title" text, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170613082109"]]
+  [1m[35m (16.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePapers (20170613082109)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE "papers"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20170613082109"]]
+  [1m[35m (36.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateQuestions (20170613080943)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "questions"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20170613080943"]]
+  [1m[35m (121.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateQuestions (20170613080943)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" text, "tag" varchar, "body" text, "answer" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "article_id" integer, CONSTRAINT "fk_rails_ae8065a073"
+FOREIGN KEY ("article_id")
+  REFERENCES "articles" ("id")
+)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX "index_questions_on_article_id" ON "questions" ("article_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170613080943"]]
+  [1m[35m (31.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePapers (20170613082109)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "papers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "title" text, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170613082109"]]
+  [1m[35m (16.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_questions_on_article_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_questions_on_article_id' AND type='index'
+[0m
+Started GET "/papers/1/edit" for 127.0.0.1 at 2017-08-08 03:52:17 +0800
+Processing by PapersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 36ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Paper with 'id'=1):
+  
+app/controllers/papers_controller.rb:23:in `edit'
+Started GET "/papers/" for 127.0.0.1 at 2017-08-08 03:52:23 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/create" for 127.0.0.1 at 2017-08-08 03:52:27 +0800
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"create"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Paper with 'id'=create):
+  
+app/controllers/papers_controller.rb:19:in `show'
+Started GET "/papers/new" for 127.0.0.1 at 2017-08-08 03:52:32 +0800
+Processing by PapersController#new as HTML
+  Rendering papers/new.html.erb within layouts/application
+  Rendered papers/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 23ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/papers" for 127.0.0.1 at 2017-08-08 03:52:36 +0800
+Processing by PapersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VwmExkvJ5RIHvZotN0+bD9vDGz6miXhasTPniByOnoWzzfG1d+YcUi/UQ18mP8RqSELwlAh+D13PGPPns8xIbA==", "paper"=>{"name"=>"1", "title"=>"11", "description"=>"1"}, "commit"=>"Create Paper"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "papers" ("name", "title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "1"], ["title", "11"], ["description", "1"], ["created_at", "2017-08-07 19:52:36.784376"], ["updated_at", "2017-08-07 19:52:36.784376"]]
+  [1m[35m (61.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/papers/1
+Completed 302 Found in 67ms (ActiveRecord: 62.6ms)
+
+
+Started GET "/papers/1" for 127.0.0.1 at 2017-08-08 03:52:36 +0800
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering papers/show.html.erb within layouts/application
+  Rendered papers/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 33ms (Views: 29.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-08 04:00:32 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 3ms
+
+
+  
+ActionView::Template::Error (undefined method `questions' for nil:NilClass):
+    1: <%= form_for([@paper, @paper.questions.build]) do |f| %>
+    2:     <p>
+    3:       <%= f.label :title %><br>
+    4:       <%= f.text_field :title %>
+  
+app/views/questions/new.html.erb:1:in `_app_views_questions_new_html_erb___1226439824763887661_69810064927900'
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-08 04:01:35 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (37.0ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (unknown attribute 'paper_id' for Question.):
+    1: <%= form_for([@paper, @paper.questions.build]) do |f| %>
+    2:     <p>
+    3:       <%= f.label :title %><br>
+    4:       <%= f.text_field :title %>
+  
+app/views/questions/new.html.erb:1:in `_app_views_questions_new_html_erb___1226439824763887661_69809962669880'
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-08 04:01:37 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (unknown attribute 'paper_id' for Question.):
+    1: <%= form_for([@paper, @paper.questions.build]) do |f| %>
+    2:     <p>
+    3:       <%= f.label :title %><br>
+    4:       <%= f.text_field :title %>
+  
+app/views/questions/new.html.erb:1:in `_app_views_questions_new_html_erb___1226439824763887661_69809962566840'
+Started PUT "/__web_console/repl_sessions/bcb9784734a2b2692108d4621057bb8d" for 127.0.0.1 at 2017-08-08 04:02:44 +0800
+Started PUT "/__web_console/repl_sessions/bcb9784734a2b2692108d4621057bb8d" for 127.0.0.1 at 2017-08-08 04:02:46 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePapers (20170613082109)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[35mDROP TABLE "papers"[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20170613082109"]]
+  [1m[35m (34.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_questions_on_article_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_questions_on_article_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateQuestions (20170613080943)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE "questions"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20170613080943"]]
+  [1m[35m (37.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateQuestions (20170613080943)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" text, "tag" varchar, "body" text, "answer" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "paper_id" integer, CONSTRAINT "fk_rails_0b941448d3"
+FOREIGN KEY ("paper_id")
+  REFERENCES "papers" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_questions_on_paper_id" ON "questions" ("paper_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170613080943"]]
+  [1m[35m (55.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePapers (20170613082109)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "papers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "title" text, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170613082109"]]
+  [1m[35m (61.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_questions_on_paper_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_questions_on_paper_id' AND type='index'
+[0m
+Started GET "/papers/new" for 127.0.0.1 at 2017-08-08 04:04:49 +0800
+Processing by PapersController#new as HTML
+  Rendering papers/new.html.erb within layouts/application
+  Rendered papers/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 164ms (Views: 154.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/papers" for 127.0.0.1 at 2017-08-08 04:04:53 +0800
+Processing by PapersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j3+jfntIALEhFBku8IbB63qSVL5JiMZ2kzkcX9oCfqxru9YNR2f58Ql9wFzh9p6O6RO/FOd/sXHtEggwdUCoRQ==", "paper"=>{"name"=>"1", "title"=>"1", "description"=>"1\r\n\r\n"}, "commit"=>"Create Paper"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "papers" ("name", "title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "1"], ["title", "1"], ["description", "1\r\n\r\n"], ["created_at", "2017-08-07 20:04:53.784299"], ["updated_at", "2017-08-07 20:04:53.784299"]]
+  [1m[35m (65.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/papers/1
+Completed 302 Found in 75ms (ActiveRecord: 66.9ms)
+
+
+Started GET "/papers/1" for 127.0.0.1 at 2017-08-08 04:04:53 +0800
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.4ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering papers/show.html.erb within layouts/application
+  Rendered papers/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 31ms (Views: 27.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-08 04:05:12 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (40.3ms)
+Completed 200 OK in 56ms (Views: 52.8ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-08 04:05:16 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z3lGRJxAr2YTe+JWMIUdmpyO7EPRlsEHIMVDhwZkMgyDvTM3oG9WJjsSOyQh9UL/Dw8H6X9htgBe7lfoqSbk5Q==", "question"=>{"title"=>"1", "tag"=>"1", "body"=>"1", "answer"=>"1"}, "commit"=>"Create Question", "paper_id"=>"1"}
+No template found for QuestionsController#create, rendering head :no_content
+Completed 204 No Content in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-08 04:05:24 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-08 04:05:25 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-08 04:05:25 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-08 04:08:03 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-08 04:08:05 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 31ms (Views: 22.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-08 04:08:05 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 26ms (Views: 22.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-08 04:08:08 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"URBz53EQuxTWyLXijhyCWpP5U7R+JC5FNd64hjBjXly11AaUTT9CVP6hbJCfbN0/AHi4HtDTWUJL9azpnyGItQ==", "question"=>{"title"=>"1", "tag"=>"1", "body"=>"1", "answer"=>"1"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "1"], ["tag", "1"], ["body", "1"], ["answer", "1"], ["created_at", "2017-08-07 20:08:08.959933"], ["updated_at", "2017-08-07 20:08:08.959933"], ["paper_id", 1]]
+  [1m[35m (52.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."paper_id" = ? LIMIT ?[0m  [["paper_id", 1], ["LIMIT", 11]]
+Redirected to 
+  [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."paper_id" = ? LIMIT ?[0m  [["paper_id", 1], ["LIMIT", 11]]
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 53.8ms)
+
+
+  
+  [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."paper_id" = ? LIMIT ?[0m  [["paper_id", 1], ["LIMIT", 11]]
+NoMethodError (undefined method `to_model' for #<Question::ActiveRecord_Associations_CollectionProxy:0x007efbcc1e98c0>
+Did you mean?  to_xml):
+  
+app/controllers/questions_controller.rb:9:in `create'
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-08 04:08:58 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"URBz53EQuxTWyLXijhyCWpP5U7R+JC5FNd64hjBjXly11AaUTT9CVP6hbJCfbN0/AHi4HtDTWUJL9azpnyGItQ==", "question"=>{"title"=>"1", "tag"=>"1", "body"=>"1", "answer"=>"1"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "1"], ["tag", "1"], ["body", "1"], ["answer", "1"], ["created_at", "2017-08-07 20:08:58.358643"], ["updated_at", "2017-08-07 20:08:58.358643"], ["paper_id", 1]]
+  [1m[35m (38.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/papers/1
+Completed 302 Found in 72ms (ActiveRecord: 40.5ms)
+
+
+Started GET "/papers/1" for 127.0.0.1 at 2017-08-08 04:08:58 +0800
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering papers/show.html.erb within layouts/application
+  Rendered papers/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/papers/1/questions/1" for 127.0.0.1 at 2017-08-08 04:12:02 +0800
+Processing by QuestionsController#show as HTML
+  Parameters: {"paper_id"=>"1", "id"=>"1"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 11.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-08 04:13:00 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 31ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionController::UnknownFormat (QuestionsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.1) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.1) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.1) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.1) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.1) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.1) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.1) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.1) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.1) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/papers/1/questions" for 127.0.0.1 at 2017-08-08 04:13:12 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 8ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionController::UnknownFormat (QuestionsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.1) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.1) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.1) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.1) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.1) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.1) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.1) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.1) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.1) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/papers/1/questions" for 127.0.0.1 at 2017-08-08 04:14:50 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  Rendered questions/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/papers/1/questions" for 127.0.0.1 at 2017-08-08 04:17:25 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  Rendered questions/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: 
+    2: <h1>paper_index</h1>
+    3: <% @questions.each do |question| %>
+    4: 	<%= link_to questio.title, question_path(question) %>
+    5: 	<%= link_to 'edit', edit_question_path(question) %>
+    6: <% end %>
+  
+app/views/questions/index.html.erb:3:in `_app_views_questions_index_html_erb__1929513483153547136_69810030242020'
+Started GET "/papers/1/questions" for 127.0.0.1 at 2017-08-08 04:18:14 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (164.5ms)
+Completed 500 Internal Server Error in 178ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `questio' for #<#<Class:0x007efbe5dba0a0>:0x007efbe5db3638>
+Did you mean?  question
+               @questions):
+    1: 
+    2: <h1>paper_index</h1>
+    3: <% @questions.each do |question| %>
+    4: 	<%= link_to questio.title, question_path(question) %>
+    5: 	<%= link_to 'edit', edit_question_path(question) %>
+    6: <% end %>
+  
+app/views/questions/index.html.erb:4:in `block in _app_views_questions_index_html_erb__1929513483153547136_69810179135380'
+app/views/questions/index.html.erb:3:in `_app_views_questions_index_html_erb__1929513483153547136_69810179135380'
+Started GET "/papers/1/questions" for 127.0.0.1 at 2017-08-08 04:18:15 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (221.1ms)
+Completed 500 Internal Server Error in 224ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `questio' for #<#<Class:0x007efbe5dba0a0>:0x007efbe57ac8c0>
+Did you mean?  question
+               @questions):
+    1: 
+    2: <h1>paper_index</h1>
+    3: <% @questions.each do |question| %>
+    4: 	<%= link_to questio.title, question_path(question) %>
+    5: 	<%= link_to 'edit', edit_question_path(question) %>
+    6: <% end %>
+  
+app/views/questions/index.html.erb:4:in `block in _app_views_questions_index_html_erb__1929513483153547136_69810175963760'
+app/views/questions/index.html.erb:3:in `_app_views_questions_index_html_erb__1929513483153547136_69810175963760'
+Started GET "/papers/1/questions" for 127.0.0.1 at 2017-08-08 04:18:35 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (108.5ms)
+Completed 500 Internal Server Error in 111ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `question_path' for #<#<Class:0x007efbe5dba0a0>:0x007efbe554a2d0>):
+    1: 
+    2: <h1>paper_index</h1>
+    3: <% @questions.each do |question| %>
+    4: 	<%= link_to question.title, question_path(question) %>
+    5: 	<%= link_to 'edit', edit_question_path(question) %>
+    6: <% end %>
+  
+app/views/questions/index.html.erb:4:in `block in _app_views_questions_index_html_erb__1929513483153547136_69810174713220'
+app/views/questions/index.html.erb:3:in `_app_views_questions_index_html_erb__1929513483153547136_69810174713220'
+Started GET "/papers/1/questions" for 127.0.0.1 at 2017-08-09 23:25:07 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (78.2ms)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_question_path' for #<#<Class:0x007efbe5dba0a0>:0x007efbe5a0e8c0>
+Did you mean?  edit_paper_question_path):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to 'edit', edit_question_path(question) %>
+    4: <% end %>
+  
+app/views/questions/index.html.erb:3:in `block in _app_views_questions_index_html_erb__1929513483153547136_69810177229600'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__1929513483153547136_69810177229600'
+Started GET "/papers/1/questions" for 127.0.0.1 at 2017-08-09 23:25:08 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (80.2ms)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_question_path' for #<#<Class:0x007efbe5dba0a0>:0x007efbe5655e68>
+Did you mean?  edit_paper_question_path):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to 'edit', edit_question_path(question) %>
+    4: <% end %>
+  
+app/views/questions/index.html.erb:3:in `block in _app_views_questions_index_html_erb__1929513483153547136_69810175262220'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__1929513483153547136_69810175262220'
+Started GET "/papers/1/questions" for 127.0.0.1 at 2017-08-09 23:25:08 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (85.3ms)
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_question_path' for #<#<Class:0x007efbe5dba0a0>:0x007efbe4785d70>
+Did you mean?  edit_paper_question_path):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to 'edit', edit_question_path(question) %>
+    4: <% end %>
+  
+app/views/questions/index.html.erb:3:in `block in _app_views_questions_index_html_erb__1929513483153547136_69810167495400'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__1929513483153547136_69810167495400'
+Started GET "/papers/1/questions" for 127.0.0.1 at 2017-08-09 23:25:09 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (74.6ms)
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_question_path' for #<#<Class:0x007efbe5dba0a0>:0x007efbcc22d430>
+Did you mean?  edit_paper_question_path):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to 'edit', edit_question_path(question) %>
+    4: <% end %>
+  
+app/views/questions/index.html.erb:3:in `block in _app_views_questions_index_html_erb__1929513483153547136_69809963364420'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__1929513483153547136_69809963364420'
+Started GET "/papers/1/questions" for 127.0.0.1 at 2017-08-09 23:25:09 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.5ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (75.9ms)
+Completed 500 Internal Server Error in 96ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_question_path' for #<#<Class:0x007efbe5dba0a0>:0x007efbd83e7288>
+Did you mean?  edit_paper_question_path):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to 'edit', edit_question_path(question) %>
+    4: <% end %>
+  
+app/views/questions/index.html.erb:3:in `block in _app_views_questions_index_html_erb__1929513483153547136_69810064949400'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__1929513483153547136_69810064949400'
+Started GET "/papers/" for 127.0.0.1 at 2017-08-09 23:27:39 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.6ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/papers/1" for 127.0.0.1 at 2017-08-09 23:27:41 +0800
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering papers/show.html.erb within layouts/application
+  Rendered papers/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/1/questions" for 127.0.0.1 at 2017-08-09 23:27:46 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (100.8ms)
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `question_path' for #<#<Class:0x007efbe5dba0a0>:0x007efbe5eedc10>):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to question.title, question_path(question) %>
+    4: 	<%= link_to 'edit', edit_question_path(question) %>
+    5: <% end %>
+  
+app/views/questions/index.html.erb:3:in `block in _app_views_questions_index_html_erb__1929513483153547136_69810179765100'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__1929513483153547136_69810179765100'
+Started GET "/papers/1/questions" for 127.0.0.1 at 2017-08-09 23:28:44 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  Rendering questions/index.html.erb within layouts/application
+  Rendered questions/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 5ms
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to question.title, question_path(question) %>
+    4: 	<%= link_to 'edit', edit_question_path(question) %>
+    5: <% end %>
+  
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__1929513483153547136_38777840'
+Started GET "/papers/1/questions" for 127.0.0.1 at 2017-08-09 23:28:49 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  Rendering questions/index.html.erb within layouts/application
+  Rendered questions/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 5ms
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to question.title, question_path(question) %>
+    4: 	<%= link_to 'edit', edit_question_path(question) %>
+    5: <% end %>
+  
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__1929513483153547136_69810176317400'
+Started GET "/papers/1/questions" for 127.0.0.1 at 2017-08-09 23:28:50 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  Rendering questions/index.html.erb within layouts/application
+  Rendered questions/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 3ms
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to question.title, question_path(question) %>
+    4: 	<%= link_to 'edit', edit_question_path(question) %>
+    5: <% end %>
+  
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__1929513483153547136_69810179718360'
+Started GET "/papers/1/questions" for 127.0.0.1 at 2017-08-09 23:28:50 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  Rendering questions/index.html.erb within layouts/application
+  Rendered questions/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 3ms
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to question.title, question_path(question) %>
+    4: 	<%= link_to 'edit', edit_question_path(question) %>
+    5: <% end %>
+  
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__1929513483153547136_69810197252680'
+Started GET "/papers/1/questions" for 127.0.0.1 at 2017-08-09 23:28:50 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  Rendering questions/index.html.erb within layouts/application
+  Rendered questions/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 3ms
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to question.title, question_path(question) %>
+    4: 	<%= link_to 'edit', edit_question_path(question) %>
+    5: <% end %>
+  
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__1929513483153547136_69810064263040'
+Started GET "/papers/1/questions" for 127.0.0.1 at 2017-08-09 23:28:50 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  Rendering questions/index.html.erb within layouts/application
+  Rendered questions/index.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 4ms
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to question.title, question_path(question) %>
+    4: 	<%= link_to 'edit', edit_question_path(question) %>
+    5: <% end %>
+  
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__1929513483153547136_69809962534500'
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-09 23:36:02 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 30ms (Views: 21.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-09 23:36:07 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ehw6i+Sn7TbhNR6I64Wl2DLR35WNoCJX5yQx1ktlKgr22E/42IgUdslcx/r69fq9oVA0PyNXVVCZDyW55Cf84w==", "question"=>{"title"=>"12", "tag"=>"12", "body"=>"12", "answer"=>"12"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "12"], ["tag", "12"], ["body", "12"], ["answer", "12"], ["created_at", "2017-08-09 15:36:07.430605"], ["updated_at", "2017-08-09 15:36:07.430605"], ["paper_id", 1]]
+  [1m[35m (75.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."paper_id" = ? LIMIT ?[0m  [["paper_id", 1], ["LIMIT", 11]]
+Redirected to 
+  [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."paper_id" = ? LIMIT ?[0m  [["paper_id", 1], ["LIMIT", 11]]
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 76.6ms)
+
+
+  
+  [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."paper_id" = ? LIMIT ?[0m  [["paper_id", 1], ["LIMIT", 11]]
+NoMethodError (undefined method `to_model' for #<Question::ActiveRecord_Associations_CollectionProxy:0x007efbe58dc128>
+Did you mean?  to_xml):
+  
+app/controllers/questions_controller.rb:13:in `create'
+Started GET "/papers/1/questions/3" for 127.0.0.1 at 2017-08-09 23:37:46 +0800
+Processing by QuestionsController#show as HTML
+  Parameters: {"paper_id"=>"1", "id"=>"3"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 20ms (Views: 17.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-09 23:41:42 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-09 23:41:46 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"77FhU2Bwq2WsjtQicVExhOkah6pec4yE+lTx9NUyaR4LdRQgXF9SJYTnDVBgIW7heptsAPCE+4OEf+WbenC/9w==", "question"=>{"title"=>"123", "tag"=>"`123", "body"=>"123", "answer"=>"123"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "123"], ["tag", "`123"], ["body", "123"], ["answer", "123"], ["created_at", "2017-08-09 15:41:46.481060"], ["updated_at", "2017-08-09 15:41:46.481060"], ["paper_id", 1]]
+  [1m[35m (113.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."paper_id" = ? LIMIT ?[0m  [["paper_id", 1], ["LIMIT", 11]]
+Redirected to 
+  [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."paper_id" = ? LIMIT ?[0m  [["paper_id", 1], ["LIMIT", 11]]
+Completed 500 Internal Server Error in 130ms (ActiveRecord: 116.1ms)
+
+
+  
+  [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."paper_id" = ? LIMIT ?[0m  [["paper_id", 1], ["LIMIT", 11]]
+NoMethodError (undefined method `to_model' for #<Question::ActiveRecord_Associations_CollectionProxy:0x00000004aa4a98>
+Did you mean?  to_xml):
+  
+app/controllers/questions_controller.rb:13:in `create'
+Started PUT "/__web_console/repl_sessions/77bdb9b6dbb02557e8b261471126c255" for 127.0.0.1 at 2017-08-09 23:41:53 +0800
+Started PUT "/__web_console/repl_sessions/77bdb9b6dbb02557e8b261471126c255" for 127.0.0.1 at 2017-08-09 23:42:00 +0800
+Started PUT "/__web_console/repl_sessions/77bdb9b6dbb02557e8b261471126c255" for 127.0.0.1 at 2017-08-09 23:42:02 +0800
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."paper_id" = ? LIMIT ?[0m  [["paper_id", 1], ["LIMIT", 11]]
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-09 23:43:52 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"77FhU2Bwq2WsjtQicVExhOkah6pec4yE+lTx9NUyaR4LdRQgXF9SJYTnDVBgIW7heptsAPCE+4OEf+WbenC/9w==", "question"=>{"title"=>"123", "tag"=>"`123", "body"=>"123", "answer"=>"123"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.2ms)
+
+
+  
+NoMethodError (undefined method `new' for nil:NilClass):
+  
+app/controllers/questions_controller.rb:12:in `create'
+Started PUT "/__web_console/repl_sessions/59dc489df662f2ee6f18e7c1cec93e21" for 127.0.0.1 at 2017-08-09 23:44:09 +0800
+Started PUT "/__web_console/repl_sessions/59dc489df662f2ee6f18e7c1cec93e21" for 127.0.0.1 at 2017-08-09 23:44:14 +0800
+Started PUT "/__web_console/repl_sessions/59dc489df662f2ee6f18e7c1cec93e21" for 127.0.0.1 at 2017-08-09 23:44:19 +0800
+Started PUT "/__web_console/repl_sessions/59dc489df662f2ee6f18e7c1cec93e21" for 127.0.0.1 at 2017-08-09 23:44:21 +0800
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."paper_id" = ? LIMIT ?[0m  [["paper_id", 1], ["LIMIT", 11]]
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-09 23:44:45 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"77FhU2Bwq2WsjtQicVExhOkah6pec4yE+lTx9NUyaR4LdRQgXF9SJYTnDVBgIW7heptsAPCE+4OEf+WbenC/9w==", "question"=>{"title"=>"123", "tag"=>"`123", "body"=>"123", "answer"=>"123"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `new' for nil:NilClass):
+  
+app/controllers/questions_controller.rb:12:in `create'
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-09 23:46:33 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"77FhU2Bwq2WsjtQicVExhOkah6pec4yE+lTx9NUyaR4LdRQgXF9SJYTnDVBgIW7heptsAPCE+4OEf+WbenC/9w==", "question"=>{"title"=>"123", "tag"=>"`123", "body"=>"123", "answer"=>"123"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `new' for nil:NilClass):
+  
+app/controllers/questions_controller.rb:12:in `create'
+Started PUT "/__web_console/repl_sessions/d4203852a45bc81b0724c33ac4c979a7" for 127.0.0.1 at 2017-08-09 23:46:44 +0800
+Started PUT "/__web_console/repl_sessions/d4203852a45bc81b0724c33ac4c979a7" for 127.0.0.1 at 2017-08-09 23:46:50 +0800
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-09 23:47:38 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"77FhU2Bwq2WsjtQicVExhOkah6pec4yE+lTx9NUyaR4LdRQgXF9SJYTnDVBgIW7heptsAPCE+4OEf+WbenC/9w==", "question"=>{"title"=>"123", "tag"=>"`123", "body"=>"123", "answer"=>"123"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "123"], ["tag", "`123"], ["body", "123"], ["answer", "123"], ["created_at", "2017-08-09 15:47:38.583071"], ["updated_at", "2017-08-09 15:47:38.583071"], ["paper_id", 1]]
+  [1m[35m (44.5ms)[0m  [1m[36mcommit transaction[0m
+No template found for QuestionsController#create, rendering head :no_content
+Completed 204 No Content in 101ms (ActiveRecord: 46.4ms)
+
+
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-09 23:47:40 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"77FhU2Bwq2WsjtQicVExhOkah6pec4yE+lTx9NUyaR4LdRQgXF9SJYTnDVBgIW7heptsAPCE+4OEf+WbenC/9w==", "question"=>{"title"=>"123", "tag"=>"`123", "body"=>"123", "answer"=>"123"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "123"], ["tag", "`123"], ["body", "123"], ["answer", "123"], ["created_at", "2017-08-09 15:47:40.568423"], ["updated_at", "2017-08-09 15:47:40.568423"], ["paper_id", 1]]
+  [1m[35m (18.5ms)[0m  [1m[36mcommit transaction[0m
+No template found for QuestionsController#create, rendering head :no_content
+Completed 204 No Content in 36ms (ActiveRecord: 19.7ms)
+
+
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-09 23:47:46 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"77FhU2Bwq2WsjtQicVExhOkah6pec4yE+lTx9NUyaR4LdRQgXF9SJYTnDVBgIW7heptsAPCE+4OEf+WbenC/9w==", "question"=>{"title"=>"123", "tag"=>"`123", "body"=>"123", "answer"=>"123"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.4ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "123"], ["tag", "`123"], ["body", "123"], ["answer", "123"], ["created_at", "2017-08-09 15:47:46.856708"], ["updated_at", "2017-08-09 15:47:46.856708"], ["paper_id", 1]]
+  [1m[35m (43.5ms)[0m  [1m[36mcommit transaction[0m
+No template found for QuestionsController#create, rendering head :no_content
+Completed 204 No Content in 82ms (ActiveRecord: 45.6ms)
+
+
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-09 23:47:48 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"77FhU2Bwq2WsjtQicVExhOkah6pec4yE+lTx9NUyaR4LdRQgXF9SJYTnDVBgIW7heptsAPCE+4OEf+WbenC/9w==", "question"=>{"title"=>"123", "tag"=>"`123", "body"=>"123", "answer"=>"123"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "123"], ["tag", "`123"], ["body", "123"], ["answer", "123"], ["created_at", "2017-08-09 15:47:48.846145"], ["updated_at", "2017-08-09 15:47:48.846145"], ["paper_id", 1]]
+  [1m[35m (19.5ms)[0m  [1m[36mcommit transaction[0m
+No template found for QuestionsController#create, rendering head :no_content
+Completed 204 No Content in 32ms (ActiveRecord: 20.5ms)
+
+
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-09 23:47:54 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-09 23:47:56 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FlA4fbdQ4mUK6bKFp9NMZp4liFnI6zDSm3zrNBj11lfylE0Oi38bJSKAa/e2oxMDDaRj82YcR9XlV/9bt7cAvg==", "question"=>{"title"=>"123", "tag"=>"`123", "body"=>"123", "answer"=>"123"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "123"], ["tag", "`123"], ["body", "123"], ["answer", "123"], ["created_at", "2017-08-09 15:47:56.219347"], ["updated_at", "2017-08-09 15:47:56.219347"], ["paper_id", 1]]
+  [1m[35m (73.5ms)[0m  [1m[36mcommit transaction[0m
+No template found for QuestionsController#create, rendering head :no_content
+Completed 204 No Content in 105ms (ActiveRecord: 74.6ms)
+
+
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-09 23:48:00 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-09 23:48:01 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zdyhx0tWUQ8cSunCtOaNuvtOKkSSE4vkO6IAMYH8Z7+BGNS0d3moTzQjMLClltLfaM/B7jzk/ONFiRReLr6xVg==", "question"=>{"title"=>"123", "tag"=>"`123", "body"=>"123", "answer"=>"123"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "123"], ["tag", "`123"], ["body", "123"], ["answer", "123"], ["created_at", "2017-08-09 15:48:01.786284"], ["updated_at", "2017-08-09 15:48:01.786284"], ["paper_id", 1]]
+  [1m[35m (51.1ms)[0m  [1m[36mcommit transaction[0m
+No template found for QuestionsController#create, rendering head :no_content
+Completed 204 No Content in 83ms (ActiveRecord: 51.9ms)
+
+
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-09 23:48:29 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 28ms (Views: 20.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-09 23:48:30 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 16ms (Views: 12.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-09 23:48:30 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-09 23:48:30 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 32ms (Views: 29.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-09 23:48:31 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-09 23:48:31 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-09 23:48:33 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S17GcY0RpsFVXsqbSytLijd+NJfoUwVzmokYgsOKZB2vmrMCsT5fgX03E+laWxTvpP/fPUakcnTkogztbMiy9A==", "question"=>{"title"=>"123", "tag"=>"`123", "body"=>"123", "answer"=>"123"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "123"], ["tag", "`123"], ["body", "123"], ["answer", "123"], ["created_at", "2017-08-09 15:48:33.391763"], ["updated_at", "2017-08-09 15:48:33.391763"], ["paper_id", 1]]
+  [1m[35m (46.7ms)[0m  [1m[36mcommit transaction[0m
+No template found for QuestionsController#create, rendering head :no_content
+Completed 204 No Content in 86ms (ActiveRecord: 47.7ms)
+
+
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-09 23:48:54 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-09 23:48:55 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t7YKa9Ejweztdhnnt47X6wkZ6X9OdYSVFg8R8zdJTu5Tcn8Y7Qw4rMUfwJWm/oiOmpgC1eCC85JoJAWcmAuYBw==", "question"=>{"title"=>"123", "tag"=>"`123", "body"=>"123", "answer"=>"123"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "123"], ["tag", "`123"], ["body", "123"], ["answer", "123"], ["created_at", "2017-08-09 15:48:55.673579"], ["updated_at", "2017-08-09 15:48:55.673579"], ["paper_id", 1]]
+  [1m[35m (60.7ms)[0m  [1m[36mcommit transaction[0m
+No template found for QuestionsController#create, rendering head :no_content
+Completed 204 No Content in 109ms (ActiveRecord: 62.7ms)
+
+
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-09 23:55:36 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 29ms (Views: 20.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-09 23:55:37 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 32ms (Views: 29.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-09 23:55:38 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hxG0J3R30BC/8ft4IUDFnttGT7ebswzXxkjGqZ+yrTdj1cFUSFgpUJeYIgowMJr7SMekHTVEe9C4Y9LGMPB73g==", "question"=>{"title"=>"123", "tag"=>"`123", "body"=>"123", "answer"=>"123"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "123"], ["tag", "`123"], ["body", "123"], ["answer", "123"], ["created_at", "2017-08-09 15:55:38.123389"], ["updated_at", "2017-08-09 15:55:38.123389"], ["paper_id", 1]]
+  [1m[35m (56.6ms)[0m  [1m[36mcommit transaction[0m
+No template found for QuestionsController#create, rendering head :no_content
+Completed 204 No Content in 91ms (ActiveRecord: 58.1ms)
+
+
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-09 23:55:40 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-09 23:55:40 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 31ms (Views: 26.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-09 23:56:11 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2z7Qr7Td0PGtefIQDjM7BEmbQzJShxYVHXEGYPJ62hA/+qXciPIpsYUQK2IfQ2Rh2hqomPxwYRJjWhIPXTgM+Q==", "question"=>{"title"=>"123", "tag"=>"`123", "body"=>"123", "answer"=>"123"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "123"], ["tag", "`123"], ["body", "123"], ["answer", "123"], ["created_at", "2017-08-09 15:56:11.593304"], ["updated_at", "2017-08-09 15:56:11.593304"], ["paper_id", 1]]
+  [1m[35m (34.9ms)[0m  [1m[36mcommit transaction[0m
+No template found for QuestionsController#create, rendering head :no_content
+Completed 204 No Content in 48ms (ActiveRecord: 36.0ms)
+
+
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-10 00:01:26 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 48ms (Views: 36.1ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-10 00:01:28 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"daZJQ4toQg5PWxu9AzsAubao3mCUnyG9yUuw92JkEuSRYjwwt0e7Tmcyws8SS1/cJSk1yjpoVrq3YKSYzSbEDQ==", "question"=>{"title"=>"123", "tag"=>"`123", "body"=>"123", "answer"=>"123"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "123"], ["tag", "`123"], ["body", "123"], ["answer", "123"], ["created_at", "2017-08-09 16:01:28.265900"], ["updated_at", "2017-08-09 16:01:28.265900"], ["paper_id", 1]]
+  [1m[35m (46.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000123
+Completed 302 Found in 56ms (ActiveRecord: 47.4ms)
+
+
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-10 00:01:41 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"daZJQ4toQg5PWxu9AzsAubao3mCUnyG9yUuw92JkEuSRYjwwt0e7Tmcyws8SS1/cJSk1yjpoVrq3YKSYzSbEDQ==", "question"=>{"title"=>"123", "tag"=>"`123", "body"=>"123", "answer"=>"123"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "123"], ["tag", "`123"], ["body", "123"], ["answer", "123"], ["created_at", "2017-08-09 16:01:41.405721"], ["updated_at", "2017-08-09 16:01:41.405721"], ["paper_id", 1]]
+  [1m[35m (24.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000123
+Completed 302 Found in 32ms (ActiveRecord: 25.3ms)
+
+
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-10 00:01:55 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"daZJQ4toQg5PWxu9AzsAubao3mCUnyG9yUuw92JkEuSRYjwwt0e7Tmcyws8SS1/cJSk1yjpoVrq3YKSYzSbEDQ==", "question"=>{"title"=>"123", "tag"=>"`123", "body"=>"123", "answer"=>"123"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "123"], ["tag", "`123"], ["body", "123"], ["answer", "123"], ["created_at", "2017-08-09 16:01:55.962881"], ["updated_at", "2017-08-09 16:01:55.962881"], ["paper_id", 1]]
+  [1m[35m (36.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000123
+Completed 302 Found in 75ms (ActiveRecord: 38.6ms)
+
+
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-10 00:02:01 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"daZJQ4toQg5PWxu9AzsAubao3mCUnyG9yUuw92JkEuSRYjwwt0e7Tmcyws8SS1/cJSk1yjpoVrq3YKSYzSbEDQ==", "question"=>{"title"=>"123", "tag"=>"`123", "body"=>"123", "answer"=>"123"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "123"], ["tag", "`123"], ["body", "123"], ["answer", "123"], ["created_at", "2017-08-09 16:02:12.011837"], ["updated_at", "2017-08-09 16:02:12.011837"], ["paper_id", 1]]
+  [1m[35m (45.0ms)[0m  [1m[36mcommit transaction[0m
+No template found for QuestionsController#create, rendering head :no_content
+Completed 204 No Content in 84ms (ActiveRecord: 46.6ms)
+
+
+Started GET "/papers/1/questions" for 127.0.0.1 at 2017-08-10 00:02:37 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (106.6ms)
+Completed 500 Internal Server Error in 114ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `question_path' for #<#<Class:0x007ff93c025b88>:0x007ff93c00bdc8>):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to question.title, question_path(question) %>
+    4: 	<%= link_to 'edit', edit_question_path(question) %>
+    5: <% end %>
+  
+app/views/questions/index.html.erb:3:in `block in _app_views_questions_index_html_erb__1193117296985196166_70354215188300'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__1193117296985196166_70354215188300'
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-10 00:03:40 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"daZJQ4toQg5PWxu9AzsAubao3mCUnyG9yUuw92JkEuSRYjwwt0e7Tmcyws8SS1/cJSk1yjpoVrq3YKSYzSbEDQ==", "question"=>{"title"=>"123", "tag"=>"`123", "body"=>"123", "answer"=>"123"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "123"], ["tag", "`123"], ["body", "123"], ["answer", "123"], ["created_at", "2017-08-09 16:03:40.919457"], ["updated_at", "2017-08-09 16:03:40.919457"], ["paper_id", 1]]
+  [1m[35m (36.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/papers/1
+Completed 302 Found in 86ms (ActiveRecord: 38.9ms)
+
+
+Started GET "/papers/1" for 127.0.0.1 at 2017-08-10 00:03:40 +0800
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering papers/show.html.erb within layouts/application
+  Rendered papers/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 181ms (Views: 179.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-10 00:06:19 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 49ms (Views: 32.9ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-10 00:06:21 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XL8tB6rRKObDTSluRwih4igbcoTIB/NjtMzPPvjLl2e4e1h0lv7Rpusk8BxWeP6Hu5qZLmbwhGTK59tRV4lBjg==", "question"=>{"title"=>"123", "tag"=>"`123", "body"=>"123", "answer"=>"123"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "123"], ["tag", "`123"], ["body", "123"], ["answer", "123"], ["created_at", "2017-08-09 16:06:21.127026"], ["updated_at", "2017-08-09 16:06:21.127026"], ["paper_id", 1]]
+  [1m[35m (66.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/papers/1
+Completed 302 Found in 81ms (ActiveRecord: 68.3ms)
+
+
+Started GET "/papers/1" for 127.0.0.1 at 2017-08-10 00:06:21 +0800
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.4ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering papers/show.html.erb within layouts/application
+  Rendered papers/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 29ms (Views: 24.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-10 00:07:52 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 48ms (Views: 27.3ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-10 00:07:53 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vUXIyGUn+SBsPlmhD2QwPmQ8eOuA6melDfp9HfuRDnBZgb27WQgAYERXgNMeFG9b972TQS4dEKJz0WlyVNPYmQ==", "question"=>{"title"=>"123", "tag"=>"`123", "body"=>"123", "answer"=>"123"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "123"], ["tag", "`123"], ["body", "123"], ["answer", "123"], ["created_at", "2017-08-09 16:07:53.353065"], ["updated_at", "2017-08-09 16:07:53.353065"], ["paper_id", 1]]
+  [1m[35m (60.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 208ms (ActiveRecord: 61.9ms)
+
+
+  
+NoMethodError (undefined method `question_url' for #<QuestionsController:0x007ff93e792978>):
+  
+app/controllers/questions_controller.rb:12:in `create'
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-10 00:09:24 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 71ms (Views: 53.1ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-10 00:09:26 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6QwdIyKlsCD5wZ7p9U7kRNru1owuLmY4gy647IbwTEYNyGhQHopJYNGoR5vkPrshSW89JoDZET/9BayDKbKarw==", "question"=>{"title"=>"123", "tag"=>"`123", "body"=>"123", "answer"=>"123"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "123"], ["tag", "`123"], ["body", "123"], ["answer", "123"], ["created_at", "2017-08-09 16:09:26.184735"], ["updated_at", "2017-08-09 16:09:26.184735"], ["paper_id", 1]]
+  [1m[35m (57.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/papers/1
+Completed 302 Found in 68ms (ActiveRecord: 58.8ms)
+
+
+Started GET "/papers/1" for 127.0.0.1 at 2017-08-10 00:09:26 +0800
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.5ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering papers/show.html.erb within layouts/application
+  Rendered papers/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 36ms (Views: 30.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-10 00:10:41 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 132ms (Views: 116.8ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-10 00:10:43 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+I1uECtKCKs/btDpH6s2JZkKbnUlQh7emRuqh5MPA4wcSRtjF2Xx6xcHCZsO22lACouF34u1adnnML7oPE3VZQ==", "question"=>{"title"=>"123", "tag"=>"`123", "body"=>"123", "answer"=>"123"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "123"], ["tag", "`123"], ["body", "123"], ["answer", "123"], ["created_at", "2017-08-09 16:10:43.922044"], ["updated_at", "2017-08-09 16:10:43.922044"], ["paper_id", 1]]
+  [1m[35m (62.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 191ms (ActiveRecord: 63.5ms)
+
+
+  
+NoMethodError (undefined method `question_url' for #<QuestionsController:0x007f44600c1a10>):
+  
+app/controllers/questions_controller.rb:14:in `create'
+Started PUT "/__web_console/repl_sessions/e2b674d07e812453a16dfcbab3063a4c" for 127.0.0.1 at 2017-08-10 00:10:47 +0800
+Started PUT "/__web_console/repl_sessions/e2b674d07e812453a16dfcbab3063a4c" for 127.0.0.1 at 2017-08-10 00:10:49 +0800
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-10 00:21:33 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 70ms (Views: 46.6ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-10 00:21:35 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1lkPhhnN+9pQvRtbq25LM8dwNvAiTlvuZ8fIj+E4CMgynXr1JeICmnjUwim6HhRWVPHdWoy5LOkZ7NzgTnreIQ==", "question"=>{"title"=>"123", "tag"=>"`123", "body"=>"123", "answer"=>"123"}, "commit"=>"Create Question", "paper_id"=>"1"}
+Redirected to 
+Completed 500 Internal Server Error in 125ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `questions_url' for #<QuestionsController:0x007f446a2686e8>):
+  
+app/controllers/questions_controller.rb:12:in `create'
+Started PUT "/__web_console/repl_sessions/0344063a7d85a507959e953f89179c90" for 127.0.0.1 at 2017-08-10 00:25:11 +0800
+Started PUT "/__web_console/repl_sessions/0344063a7d85a507959e953f89179c90" for 127.0.0.1 at 2017-08-10 00:25:17 +0800
+Started PUT "/__web_console/repl_sessions/0344063a7d85a507959e953f89179c90" for 127.0.0.1 at 2017-08-10 00:25:20 +0800
+Started PUT "/__web_console/repl_sessions/0344063a7d85a507959e953f89179c90" for 127.0.0.1 at 2017-08-10 00:25:24 +0800
+Started PUT "/__web_console/repl_sessions/0344063a7d85a507959e953f89179c90" for 127.0.0.1 at 2017-08-10 00:25:30 +0800
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-10 00:28:08 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 36ms (Views: 24.4ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-10 00:28:12 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MnogbNusG/oRy3h9yCkwsehKQh+kwp1XaJIOZqW/eFbWvlUf54PiujmioQ/ZWW/Ue8uptQo16lAWuRoJCv2uvw==", "question"=>{"title"=>"13", "tag"=>"`123", "body"=>"123", "answer"=>"123"}, "commit"=>"Create Question", "paper_id"=>"1"}
+Redirected to 
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `questions_url' for #<QuestionsController:0x007f4469bbe158>):
+  
+app/controllers/questions_controller.rb:12:in `create'
+Started PUT "/__web_console/repl_sessions/68b1346acbb72818af98e6d3b21bfba2" for 127.0.0.1 at 2017-08-10 00:28:46 +0800
+Started PUT "/__web_console/repl_sessions/68b1346acbb72818af98e6d3b21bfba2" for 127.0.0.1 at 2017-08-10 00:28:48 +0800
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-10 00:30:06 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MnogbNusG/oRy3h9yCkwsehKQh+kwp1XaJIOZqW/eFbWvlUf54PiujmioQ/ZWW/Ue8uptQo16lAWuRoJCv2uvw==", "question"=>{"title"=>"13", "tag"=>"`123", "body"=>"123", "answer"=>"123"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "13"], ["tag", "`123"], ["body", "123"], ["answer", "123"], ["created_at", "2017-08-09 16:30:06.771937"], ["updated_at", "2017-08-09 16:30:06.771937"], ["paper_id", 1]]
+  [1m[35m (30.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 145ms (ActiveRecord: 33.4ms)
+
+
+  
+NoMethodError (undefined method `question_url' for #<QuestionsController:0x007f44600d2428>):
+  
+app/controllers/questions_controller.rb:12:in `create'
+Started PUT "/__web_console/repl_sessions/5e462c6173acdcded744d97add0790f5" for 127.0.0.1 at 2017-08-10 00:30:11 +0800
+Started PUT "/__web_console/repl_sessions/5e462c6173acdcded744d97add0790f5" for 127.0.0.1 at 2017-08-10 00:30:13 +0800
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-10 00:35:59 +0800
+  
+SyntaxError (/home/zw/projects/exam/app/controllers/questions_controller.rb:12: syntax error, unexpected tIVAR, expecting '('
+		@paper.questions.create(question_par
+		      ^):
+  
+app/controllers/questions_controller.rb:12: syntax error, unexpected tIVAR, expecting '('
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-10 00:36:05 +0800
+  
+SyntaxError (/home/zw/projects/exam/app/controllers/questions_controller.rb:12: syntax error, unexpected tIVAR, expecting '('
+		@paper.questions.create(question_par
+		      ^):
+  
+app/controllers/questions_controller.rb:12: syntax error, unexpected tIVAR, expecting '('
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-10 00:36:15 +0800
+  
+SyntaxError (/home/zw/projects/exam/app/controllers/questions_controller.rb:12: syntax error, unexpected tIVAR, expecting '('
+		@paper.questions.create(question_par
+		      ^):
+  
+app/controllers/questions_controller.rb:12: syntax error, unexpected tIVAR, expecting '('
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-10 00:36:26 +0800
+  
+SyntaxError (/home/zw/projects/exam/app/controllers/questions_controller.rb:12: syntax error, unexpected tIVAR, expecting '('
+		@paper.questions.create(question_par
+		      ^):
+  
+app/controllers/questions_controller.rb:12: syntax error, unexpected tIVAR, expecting '('
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-10 00:36:30 +0800
+  
+SyntaxError (/home/zw/projects/exam/app/controllers/questions_controller.rb:12: syntax error, unexpected tIVAR, expecting '('
+		@paper.questions.create(question_par
+		      ^):
+  
+app/controllers/questions_controller.rb:12: syntax error, unexpected tIVAR, expecting '('
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-10 00:36:32 +0800
+  
+SyntaxError (/home/zw/projects/exam/app/controllers/questions_controller.rb:12: syntax error, unexpected tIVAR, expecting '('
+		@paper.questions.create(question_par
+		      ^):
+  
+app/controllers/questions_controller.rb:12: syntax error, unexpected tIVAR, expecting '('
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-10 00:36:49 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/zw/projects/exam/app/controllers/questions_controller.rb:12: syntax error, unexpected tIVAR, expecting '('
+		@paper.questions.create(question_par
+		      ^):
+  
+app/controllers/questions_controller.rb:12: syntax error, unexpected tIVAR, expecting '('
+Started GET "/papers/1/questions/3" for 127.0.0.1 at 2017-08-10 00:36:53 +0800
+  
+SyntaxError (/home/zw/projects/exam/app/controllers/questions_controller.rb:12: syntax error, unexpected tIVAR, expecting '('
+		@paper.questions.create(question_par
+		      ^):
+  
+app/controllers/questions_controller.rb:12: syntax error, unexpected tIVAR, expecting '('
+Started GET "/papers/1/questions/3" for 127.0.0.1 at 2017-08-10 00:36:56 +0800
+  
+SyntaxError (/home/zw/projects/exam/app/controllers/questions_controller.rb:12: syntax error, unexpected tIVAR, expecting '('
+		@paper.questions.create(question_par
+		      ^):
+  
+app/controllers/questions_controller.rb:12: syntax error, unexpected tIVAR, expecting '('
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-10 00:37:25 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (33.4ms)
+Completed 200 OK in 176ms (Views: 153.5ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-10 00:37:31 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LWVOy5iYjmlKWeKY96OvtR0/1H4H1DiR3fQ2KM4LwjrJoTu4pLd3KWIwO+rm0/DQjr4/1KkjT5aj3yJHYUkU0w==", "question"=>{"title"=>"12", "tag"=>"12", "body"=>"12", "answer"=>"12"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "12"], ["tag", "12"], ["body", "12"], ["answer", "12"], ["created_at", "2017-08-09 16:37:31.176554"], ["updated_at", "2017-08-09 16:37:31.176554"], ["paper_id", 1]]
+  [1m[35m (129.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/papers/1
+Completed 302 Found in 141ms (ActiveRecord: 131.2ms)
+
+
+Started GET "/papers/1" for 127.0.0.1 at 2017-08-10 00:37:31 +0800
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering papers/show.html.erb within layouts/application
+  Rendered papers/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 46ms (Views: 42.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-10 00:37:43 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (1.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (32.5ms)
+Completed 200 OK in 69ms (Views: 43.0ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-10 00:37:45 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vg6DXD7//KWBgHUmvFl1YFQzEKeFIw/xT1LXB+a72MSyyvYvAtAF5anprFStKSoFx7L7DSvUePYxecNoSfkOLQ==", "question"=>{"title"=>"12", "tag"=>"12", "body"=>"12", "answer"=>"12"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "12"], ["tag", "12"], ["body", "12"], ["answer", "12"], ["created_at", "2017-08-09 16:37:45.801312"], ["updated_at", "2017-08-09 16:37:45.801312"], ["paper_id", 1]]
+  [1m[35m (31.5ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 33.2ms)
+
+
+  
+NoMethodError (undefined method `question' for #<Paper:0x007fbd900d7eb0>
+Did you mean?  questions
+               questions=):
+  
+app/controllers/questions_controller.rb:13:in `create'
+Started PUT "/__web_console/repl_sessions/f98dec4a908f87277b5681705e7d5d2c" for 127.0.0.1 at 2017-08-10 00:37:49 +0800
+Started PUT "/__web_console/repl_sessions/f98dec4a908f87277b5681705e7d5d2c" for 127.0.0.1 at 2017-08-10 00:37:53 +0800
+Started PUT "/__web_console/repl_sessions/f98dec4a908f87277b5681705e7d5d2c" for 127.0.0.1 at 2017-08-10 00:37:57 +0800
+Started PUT "/__web_console/repl_sessions/f98dec4a908f87277b5681705e7d5d2c" for 127.0.0.1 at 2017-08-10 00:37:59 +0800
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."paper_id" = ? LIMIT ?[0m  [["paper_id", 1], ["LIMIT", 11]]
+Started PUT "/__web_console/repl_sessions/f98dec4a908f87277b5681705e7d5d2c" for 127.0.0.1 at 2017-08-10 00:38:04 +0800
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-10 00:41:55 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vg6DXD7//KWBgHUmvFl1YFQzEKeFIw/xT1LXB+a72MSyyvYvAtAF5anprFStKSoFx7L7DSvUePYxecNoSfkOLQ==", "question"=>{"title"=>"12", "tag"=>"12", "body"=>"12", "answer"=>"12"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "12"], ["tag", "12"], ["body", "12"], ["answer", "12"], ["created_at", "2017-08-09 16:41:55.412716"], ["updated_at", "2017-08-09 16:41:55.412716"], ["paper_id", 1]]
+  [1m[35m (30.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 32.3ms)
+
+
+  
+NoMethodError (undefined method `question' for #<Paper:0x007fbd8a04e8a0>
+Did you mean?  questions
+               questions=):
+  
+app/controllers/questions_controller.rb:13:in `create'
+Started PUT "/__web_console/repl_sessions/08945dd517a417f8ba95b9a19a45dbd7" for 127.0.0.1 at 2017-08-10 00:42:01 +0800
+Started PUT "/__web_console/repl_sessions/08945dd517a417f8ba95b9a19a45dbd7" for 127.0.0.1 at 2017-08-10 00:42:05 +0800
+Started PUT "/__web_console/repl_sessions/08945dd517a417f8ba95b9a19a45dbd7" for 127.0.0.1 at 2017-08-10 00:42:14 +0800
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-10 00:42:21 +0800
+  
+SyntaxError (/home/zw/projects/exam/app/controllers/questions_controller.rb:13: syntax error, unexpected tIVAR, expecting '('
+		redirect_to @paper.@question
+		                            ^):
+  
+app/controllers/questions_controller.rb:13: syntax error, unexpected tIVAR, expecting '('
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-10 00:42:32 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vg6DXD7//KWBgHUmvFl1YFQzEKeFIw/xT1LXB+a72MSyyvYvAtAF5anprFStKSoFx7L7DSvUePYxecNoSfkOLQ==", "question"=>{"title"=>"12", "tag"=>"12", "body"=>"12", "answer"=>"12"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.4ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "12"], ["tag", "12"], ["body", "12"], ["answer", "12"], ["created_at", "2017-08-09 16:42:32.565274"], ["updated_at", "2017-08-09 16:42:32.565274"], ["paper_id", 1]]
+  [1m[35m (17.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 20.2ms)
+
+
+  
+NoMethodError (undefined method `question' for #<Paper:0x007fbd8a5f74f0>
+Did you mean?  questions
+               questions=):
+  
+app/controllers/questions_controller.rb:13:in `create'
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-10 00:44:03 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vg6DXD7//KWBgHUmvFl1YFQzEKeFIw/xT1LXB+a72MSyyvYvAtAF5anprFStKSoFx7L7DSvUePYxecNoSfkOLQ==", "question"=>{"title"=>"12", "tag"=>"12", "body"=>"12", "answer"=>"12"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "12"], ["tag", "12"], ["body", "12"], ["answer", "12"], ["created_at", "2017-08-09 16:44:03.095548"], ["updated_at", "2017-08-09 16:44:03.095548"], ["paper_id", 1]]
+  [1m[35m (44.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 47.2ms)
+
+
+  
+NoMethodError (undefined method `question' for #<Paper:0x007fbd904fdda0>
+Did you mean?  questions
+               questions=):
+  
+app/controllers/questions_controller.rb:13:in `create'
+Started PUT "/__web_console/repl_sessions/004dfab4a895515121797c364e2bd895" for 127.0.0.1 at 2017-08-10 00:44:06 +0800
+Started PUT "/__web_console/repl_sessions/004dfab4a895515121797c364e2bd895" for 127.0.0.1 at 2017-08-10 00:44:10 +0800
+Started PUT "/__web_console/repl_sessions/004dfab4a895515121797c364e2bd895" for 127.0.0.1 at 2017-08-10 00:44:15 +0800
+Started PUT "/__web_console/repl_sessions/004dfab4a895515121797c364e2bd895" for 127.0.0.1 at 2017-08-10 00:44:19 +0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "questions".id FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+Started PUT "/__web_console/repl_sessions/004dfab4a895515121797c364e2bd895" for 127.0.0.1 at 2017-08-10 00:44:25 +0800
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."paper_id" = ? LIMIT ?[0m  [["paper_id", 1], ["LIMIT", 11]]
+Started PUT "/__web_console/repl_sessions/004dfab4a895515121797c364e2bd895" for 127.0.0.1 at 2017-08-10 00:44:29 +0800
+Started PUT "/__web_console/repl_sessions/004dfab4a895515121797c364e2bd895" for 127.0.0.1 at 2017-08-10 00:44:31 +0800
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."paper_id" = ? AND "questions"."id" = ? LIMIT ?[0m  [["paper_id", 1], ["id", 1], ["LIMIT", 1]]

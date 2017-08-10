@@ -16,10 +16,8 @@ ActiveRecord::Schema.define(version: 20170613082109) do
     t.string "name"
     t.text "title"
     t.text "description"
-    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_papers_on_user_id"
   end
 
   create_table "questions", force: :cascade do |t|
@@ -27,17 +25,10 @@ ActiveRecord::Schema.define(version: 20170613082109) do
     t.string "tag"
     t.text "body"
     t.text "answer"
-    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_questions_on_user_id"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer "paper_id"
+    t.index ["paper_id"], name: "index_questions_on_paper_id"
   end
 
 end
