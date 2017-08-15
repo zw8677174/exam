@@ -4,3 +4,8 @@
 require_relative 'config/application'
 
 Rails.application.load_tasks
+
+
+task :server do
+  ruby './bin/rails server'
+end

@@ -1,6 +1,6 @@
 class PapersController < ApplicationController
   def index
-	@papers = Paper.all
+    @papers = Paper.all
   end
 
   def create
@@ -10,15 +10,25 @@ class PapersController < ApplicationController
   end
 
   def new
-	@paper = Paper.new
+    @paper = Paper.new
   end
 
   def show
     @paper = Paper.find(params[:id])
   end
 
+  def edit
+    @paper = Paper.find(params[:id])
+  end
+
+  def update
+    @paper = Paper.find(params[:id])
+    @paper.update(paper_params)
+    redirect_to @paper
+  end
+
   private
-    def paper_params
-      params.require(:paper).permit(:name, :title, :description)
-    end
+  def paper_params
+    params.require(:paper).permit(:name, :title, :description)
+  end
 end

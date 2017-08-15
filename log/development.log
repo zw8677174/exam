@@ -7017,3 +7017,1828 @@ Started PUT "/__web_console/repl_sessions/004dfab4a895515121797c364e2bd895" for 
 Started PUT "/__web_console/repl_sessions/004dfab4a895515121797c364e2bd895" for 127.0.0.1 at 2017-08-10 00:44:29 +0800
 Started PUT "/__web_console/repl_sessions/004dfab4a895515121797c364e2bd895" for 127.0.0.1 at 2017-08-10 00:44:31 +0800
   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."paper_id" = ? AND "questions"."id" = ? LIMIT ?[0m  [["paper_id", 1], ["id", 1], ["LIMIT", 1]]
+Started GET "/papers/1/add_question" for 127.0.0.1 at 2017-08-10 09:57:56 +0800
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/papers/1/add_question"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/papers/1/questions" for 127.0.0.1 at 2017-08-10 09:58:04 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.5ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (111.3ms)
+Completed 500 Internal Server Error in 146ms (ActiveRecord: 2.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `question_path' for #<#<Class:0x007ff80c333a40>:0x007ff80c330a70>):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to question.title, question_path(question) %>
+    4: 	<%= link_to 'edit', edit_question_path(question) %>
+    5: <% end %>
+  
+app/views/questions/index.html.erb:3:in `block in _app_views_questions_index_html_erb__2393940624905730053_70351666661320'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__2393940624905730053_70351666661320'
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-10 09:58:10 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 709ms (Views: 706.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-10 09:58:16 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YpYzU+CPOoeabiwrWNnJwKP3HUVSeODwjYk4UuhTitbua0/xeToUKRUs8doAUPUyEd1+pUZxTPI+BLUam4HpvQ==", "question"=>{"title"=>"12", "tag"=>"1", "body"=>"1", "answer"=>"1"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "12"], ["tag", "1"], ["body", "1"], ["answer", "1"], ["created_at", "2017-08-10 01:58:16.770110"], ["updated_at", "2017-08-10 01:58:16.770110"], ["paper_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 161ms (ActiveRecord: 2.5ms)
+
+
+  
+NoMethodError (undefined method `question_url' for #<QuestionsController:0x007ff808637a88>):
+  
+app/controllers/questions_controller.rb:12:in `create'
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-10 09:59:18 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YpYzU+CPOoeabiwrWNnJwKP3HUVSeODwjYk4UuhTitbua0/xeToUKRUs8doAUPUyEd1+pUZxTPI+BLUam4HpvQ==", "question"=>{"title"=>"12", "tag"=>"1", "body"=>"1", "answer"=>"1"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "12"], ["tag", "1"], ["body", "1"], ["answer", "1"], ["created_at", "2017-08-10 01:59:18.483416"], ["updated_at", "2017-08-10 01:59:18.483416"], ["paper_id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 131ms (ActiveRecord: 1.4ms)
+
+
+  
+NoMethodError (undefined method `question_url' for #<QuestionsController:0x007ff809d00f58>):
+  
+app/controllers/questions_controller.rb:12:in `create'
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-10 10:13:07 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YpYzU+CPOoeabiwrWNnJwKP3HUVSeODwjYk4UuhTitbua0/xeToUKRUs8doAUPUyEd1+pUZxTPI+BLUam4HpvQ==", "question"=>{"title"=>"12", "tag"=>"1", "body"=>"1", "answer"=>"1"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/papers/1/questions/1
+Completed 302 Found in 24ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/papers/1/questions/1" for 127.0.0.1 at 2017-08-10 10:13:08 +0800
+Processing by QuestionsController#show as HTML
+  Parameters: {"paper_id"=>"1", "id"=>"1"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 7ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Question with 'id'=1):
+  
+app/controllers/questions_controller.rb:17:in `show'
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-10 10:13:24 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 53ms (Views: 40.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-10 10:13:29 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jqt2hvhfzQhi+/5l5U7f9mJiehpDQjktGCP3eG8OD98CVgokYerjpu25I5S9x+ME0EgZ+ldLlS+rrnowHNxstA==", "question"=>{"title"=>"1", "tag"=>"1", "body"=>"1", "answer"=>"1"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/papers/1/questions/2
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/papers/1/questions/2" for 127.0.0.1 at 2017-08-10 10:13:29 +0800
+Processing by QuestionsController#show as HTML
+  Parameters: {"paper_id"=>"1", "id"=>"2"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Question with 'id'=2):
+  
+app/controllers/questions_controller.rb:17:in `show'
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-10 10:23:53 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 49ms (Views: 36.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/papers/1/questions/new" for 127.0.0.1 at 2017-08-10 10:23:54 +0800
+Processing by QuestionsController#new as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 26ms (Views: 23.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/papers/1/questions" for 127.0.0.1 at 2017-08-10 10:23:59 +0800
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MT/qMCx8hS5MIiamkmChcVC9fEodT7lL6wcOry8NsCi9wpaStcmrgMNg+1fK6Z2D4pcfqglGFUlYioPnXN/TQw==", "question"=>{"title"=>"123", "tag"=>"123", "body"=>"123", "answer"=>"123"}, "commit"=>"Create Question", "paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("title", "tag", "body", "answer", "created_at", "updated_at", "paper_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "123"], ["tag", "123"], ["body", "123"], ["answer", "123"], ["created_at", "2017-08-10 02:23:59.026488"], ["updated_at", "2017-08-10 02:23:59.026488"], ["paper_id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/papers/1/questions/32
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/papers/1/questions/32" for 127.0.0.1 at 2017-08-10 10:23:59 +0800
+Processing by QuestionsController#show as HTML
+  Parameters: {"paper_id"=>"1", "id"=>"32"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 24ms (Views: 20.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-10 10:24:43 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (120.6ms)
+Completed 500 Internal Server Error in 145ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `question_path' for #<#<Class:0x007ff809913760>:0x007ff806f64a18>):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to question.title, question_path(question) %>
+    4: 	<%= link_to 'edit', edit_question_path(question) %>
+    5: <% end %>
+  
+app/views/questions/index.html.erb:3:in `block in _app_views_questions_index_html_erb__2393940624905730053_70351644608060'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__2393940624905730053_70351644608060'
+Started PUT "/__web_console/repl_sessions/265335350c163790dfacfc0611973724" for 127.0.0.1 at 2017-08-10 10:24:54 +0800
+Started PUT "/__web_console/repl_sessions/265335350c163790dfacfc0611973724" for 127.0.0.1 at 2017-08-10 10:25:13 +0800
+Started PUT "/__web_console/repl_sessions/265335350c163790dfacfc0611973724" for 127.0.0.1 at 2017-08-10 10:29:40 +0800
+Started PUT "/__web_console/repl_sessions/265335350c163790dfacfc0611973724" for 127.0.0.1 at 2017-08-10 10:29:52 +0800
+Started PUT "/__web_console/repl_sessions/265335350c163790dfacfc0611973724" for 127.0.0.1 at 2017-08-10 10:29:54 +0800
+Started PUT "/__web_console/repl_sessions/265335350c163790dfacfc0611973724" for 127.0.0.1 at 2017-08-10 10:29:54 +0800
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-10 10:44:11 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"questions", :paper_id=>#<Question id: 31, title: "12", tag: "1", body: "1", answer: "1", created_at: "2017-08-10 01:59:18", updated_at: "2017-08-10 01:59:18", paper_id: 1>}, missing required keys: [:id]):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to question.title, paper_question_path(question) %>
+    4: 	<%= link_to 'edit', edit_paper_question_path(question) %>
+    5: <% end %>
+  
+app/views/questions/index.html.erb:3:in `block in _app_views_questions_index_html_erb__2393940624905730053_70351634084700'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__2393940624905730053_70351634084700'
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-10 10:44:12 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"questions", :paper_id=>#<Question id: 31, title: "12", tag: "1", body: "1", answer: "1", created_at: "2017-08-10 01:59:18", updated_at: "2017-08-10 01:59:18", paper_id: 1>}, missing required keys: [:id]):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to question.title, paper_question_path(question) %>
+    4: 	<%= link_to 'edit', edit_paper_question_path(question) %>
+    5: <% end %>
+  
+app/views/questions/index.html.erb:3:in `block in _app_views_questions_index_html_erb__2393940624905730053_70351627346560'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__2393940624905730053_70351627346560'
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-10 10:44:13 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"questions", :paper_id=>#<Question id: 31, title: "12", tag: "1", body: "1", answer: "1", created_at: "2017-08-10 01:59:18", updated_at: "2017-08-10 01:59:18", paper_id: 1>}, missing required keys: [:id]):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to question.title, paper_question_path(question) %>
+    4: 	<%= link_to 'edit', edit_paper_question_path(question) %>
+    5: <% end %>
+  
+app/views/questions/index.html.erb:3:in `block in _app_views_questions_index_html_erb__2393940624905730053_70351678233220'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__2393940624905730053_70351678233220'
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-10 10:46:41 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (1.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (12.0ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"questions", :paper_id=>#<Question id: 31, title: "12", tag: "1", body: "1", answer: "1", created_at: "2017-08-10 01:59:18", updated_at: "2017-08-10 01:59:18", paper_id: 1>}, missing required keys: [:id]):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to question.title, paper_question_path(question) %>
+    4: 	<%= link_to 'edit', edit_paper_question_path(question) %>
+    5: <% end %>
+  
+app/views/questions/index.html.erb:3:in `block in _app_views_questions_index_html_erb__2393940624905730053_70351644976000'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__2393940624905730053_70351644976000'
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-10 10:47:10 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"questions", :paper_id=>31}, missing required keys: [:id]):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to question.title, paper_question_path(question.id) %>
+    4: 	<%= link_to 'edit', edit_paper_question_path(question) %>
+    5: <% end %>
+  
+app/views/questions/index.html.erb:3:in `block in _app_views_questions_index_html_erb__2393940624905730053_70351677958080'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__2393940624905730053_70351677958080'
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-10 10:47:12 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"questions", :paper_id=>31}, missing required keys: [:id]):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to question.title, paper_question_path(question.id) %>
+    4: 	<%= link_to 'edit', edit_paper_question_path(question) %>
+    5: <% end %>
+  
+app/views/questions/index.html.erb:3:in `block in _app_views_questions_index_html_erb__2393940624905730053_70351691601520'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__2393940624905730053_70351691601520'
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-10 10:47:19 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for :question:Symbol):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to question.title, paper_question_path(:question.id) %>
+    4: 	<%= link_to 'edit', edit_paper_question_path(question) %>
+    5: <% end %>
+  
+app/views/questions/index.html.erb:3:in `block in _app_views_questions_index_html_erb__2393940624905730053_70351665370500'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__2393940624905730053_70351665370500'
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-10 10:47:20 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for :question:Symbol):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to question.title, paper_question_path(:question.id) %>
+    4: 	<%= link_to 'edit', edit_paper_question_path(question) %>
+    5: <% end %>
+  
+app/views/questions/index.html.erb:3:in `block in _app_views_questions_index_html_erb__2393940624905730053_70351667300780'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__2393940624905730053_70351667300780'
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-10 10:47:22 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for :question:Symbol):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to question.title, paper_question_path(:question.id) %>
+    4: 	<%= link_to 'edit', edit_paper_question_path(question) %>
+    5: <% end %>
+  
+app/views/questions/index.html.erb:3:in `block in _app_views_questions_index_html_erb__2393940624905730053_70351696078940'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__2393940624905730053_70351696078940'
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-10 10:47:39 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"questions", :paper_id=>1}, missing required keys: [:id]):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to question.title, paper_question_path(1) %>
+    4: 	<%= link_to 'edit', edit_paper_question_path(question) %>
+    5: <% end %>
+  
+app/views/questions/index.html.erb:3:in `block in _app_views_questions_index_html_erb__2393940624905730053_70351641872240'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__2393940624905730053_70351641872240'
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-10 10:47:40 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"questions", :paper_id=>1}, missing required keys: [:id]):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to question.title, paper_question_path(1) %>
+    4: 	<%= link_to 'edit', edit_paper_question_path(question) %>
+    5: <% end %>
+  
+app/views/questions/index.html.erb:3:in `block in _app_views_questions_index_html_erb__2393940624905730053_70351690647800'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__2393940624905730053_70351690647800'
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-10 10:47:56 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"questions", :paper_id=>#<Question id: 31, title: "12", tag: "1", body: "1", answer: "1", created_at: "2017-08-10 01:59:18", updated_at: "2017-08-10 01:59:18", paper_id: 1>}, missing required keys: [:id]):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to question.title, paper_question_path(question) %>
+    4: 	<%= link_to 'edit', edit_paper_question_path(question) %>
+    5: <% end %>
+  
+app/views/questions/index.html.erb:3:in `block in _app_views_questions_index_html_erb__2393940624905730053_70351695976420'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__2393940624905730053_70351695976420'
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-10 10:47:57 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"questions", :paper_id=>#<Question id: 31, title: "12", tag: "1", body: "1", answer: "1", created_at: "2017-08-10 01:59:18", updated_at: "2017-08-10 01:59:18", paper_id: 1>}, missing required keys: [:id]):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to question.title, paper_question_path(question) %>
+    4: 	<%= link_to 'edit', edit_paper_question_path(question) %>
+    5: <% end %>
+  
+app/views/questions/index.html.erb:3:in `block in _app_views_questions_index_html_erb__2393940624905730053_70351668354860'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__2393940624905730053_70351668354860'
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-10 10:51:22 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"questions", :paper_id=>#<Question id: 31, title: "12", tag: "1", body: "1", answer: "1", created_at: "2017-08-10 01:59:18", updated_at: "2017-08-10 01:59:18", paper_id: 1>}, missing required keys: [:id]):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3:     {{ question.title }}
+    4: 	<!--<%= link_to question.title, paper_question_path(question) %>-->
+    5: 	<!--<%= link_to 'edit', edit_paper_question_path(question) %>-->
+    6: <% end %>
+  
+app/views/questions/index.html.erb:4:in `block in _app_views_questions_index_html_erb__2393940624905730053_70351627281400'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__2393940624905730053_70351627281400'
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-10 10:51:24 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"questions", :paper_id=>#<Question id: 31, title: "12", tag: "1", body: "1", answer: "1", created_at: "2017-08-10 01:59:18", updated_at: "2017-08-10 01:59:18", paper_id: 1>}, missing required keys: [:id]):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3:     {{ question.title }}
+    4: 	<!--<%= link_to question.title, paper_question_path(question) %>-->
+    5: 	<!--<%= link_to 'edit', edit_paper_question_path(question) %>-->
+    6: <% end %>
+  
+app/views/questions/index.html.erb:4:in `block in _app_views_questions_index_html_erb__2393940624905730053_70351691386220'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__2393940624905730053_70351691386220'
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-10 10:51:25 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.5ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"questions", :paper_id=>#<Question id: 31, title: "12", tag: "1", body: "1", answer: "1", created_at: "2017-08-10 01:59:18", updated_at: "2017-08-10 01:59:18", paper_id: 1>}, missing required keys: [:id]):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3:     {{ question.title }}
+    4: 	<!--<%= link_to question.title, paper_question_path(question) %>-->
+    5: 	<!--<%= link_to 'edit', edit_paper_question_path(question) %>-->
+    6: <% end %>
+  
+app/views/questions/index.html.erb:4:in `block in _app_views_questions_index_html_erb__2393940624905730053_70351694969680'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__2393940624905730053_70351694969680'
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-10 10:51:34 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-10 10:51:35 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-10 10:53:27 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (9.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 35ms (Views: 23.3ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-10 10:53:28 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-10 10:53:28 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-10 10:53:39 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"questions", :paper_id=>#<Question id: 31, title: "12", tag: "1", body: "1", answer: "1", created_at: "2017-08-10 01:59:18", updated_at: "2017-08-10 01:59:18", paper_id: 1>}, missing required keys: [:id]):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to 'edit', edit_paper_question_path(question) %>
+    4: <% end %>
+  
+app/views/questions/index.html.erb:3:in `block in _app_views_questions_index_html_erb__2393940624905730053_70351646949960'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__2393940624905730053_70351646949960'
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-10 17:00:49 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (1.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (13.3ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"questions", :paper_id=>#<Question id: 31, title: "12", tag: "1", body: "1", answer: "1", created_at: "2017-08-10 01:59:18", updated_at: "2017-08-10 01:59:18", paper_id: 1>}, missing required keys: [:id]):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to question.title, paper_question_path(question), id: question %>
+    4: 	<%= link_to 'edit', edit_paper_question_path(question) %>
+    5: <% end %>
+  
+app/views/questions/index.html.erb:3:in `block in _app_views_questions_index_html_erb__2393940624905730053_70351678169540'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__2393940624905730053_70351678169540'
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-10 17:00:51 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"questions", :paper_id=>#<Question id: 31, title: "12", tag: "1", body: "1", answer: "1", created_at: "2017-08-10 01:59:18", updated_at: "2017-08-10 01:59:18", paper_id: 1>}, missing required keys: [:id]):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to question.title, paper_question_path(question), id: question %>
+    4: 	<%= link_to 'edit', edit_paper_question_path(question) %>
+    5: <% end %>
+  
+app/views/questions/index.html.erb:3:in `block in _app_views_questions_index_html_erb__2393940624905730053_70351679153280'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__2393940624905730053_70351679153280'
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-10 17:01:43 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  Rendered questions/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/Users/zw_dev/projects/exam/app/views/questions/index.html.erb:3: syntax error, unexpected ')'
+question_path(id:question),  );@output_buffer.safe_append='
+                              ^
+/Users/zw_dev/projects/exam/app/views/questions/index.html.erb:5: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/Users/zw_dev/projects/exam/app/views/questions/index.html.erb:7: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/zw_dev/projects/exam/app/views/questions/index.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/questions/index.html.erb:3: syntax error, unexpected ')'
+app/views/questions/index.html.erb:5: syntax error, unexpected keyword_end, expecting ')'
+app/views/questions/index.html.erb:7: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/questions/index.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-10 17:01:44 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  Rendered questions/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/Users/zw_dev/projects/exam/app/views/questions/index.html.erb:3: syntax error, unexpected ')'
+question_path(id:question),  );@output_buffer.safe_append='
+                              ^
+/Users/zw_dev/projects/exam/app/views/questions/index.html.erb:5: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/Users/zw_dev/projects/exam/app/views/questions/index.html.erb:7: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/zw_dev/projects/exam/app/views/questions/index.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/questions/index.html.erb:3: syntax error, unexpected ')'
+app/views/questions/index.html.erb:5: syntax error, unexpected keyword_end, expecting ')'
+app/views/questions/index.html.erb:7: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/questions/index.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-10 17:01:48 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"questions", :paper_id=>#<Question id: 31, title: "12", tag: "1", body: "1", answer: "1", created_at: "2017-08-10 01:59:18", updated_at: "2017-08-10 01:59:18", paper_id: 1>}, missing required keys: [:id]):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to question.title, paper_question_path(id:question)  %>
+    4: 	<%= link_to 'edit', edit_paper_question_path(question) %>
+    5: <% end %>
+  
+app/views/questions/index.html.erb:4:in `block in _app_views_questions_index_html_erb__2393940624905730053_70351646707820'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__2393940624905730053_70351646707820'
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-10 17:01:49 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"questions", :paper_id=>#<Question id: 31, title: "12", tag: "1", body: "1", answer: "1", created_at: "2017-08-10 01:59:18", updated_at: "2017-08-10 01:59:18", paper_id: 1>}, missing required keys: [:id]):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to question.title, paper_question_path(id:question)  %>
+    4: 	<%= link_to 'edit', edit_paper_question_path(question) %>
+    5: <% end %>
+  
+app/views/questions/index.html.erb:4:in `block in _app_views_questions_index_html_erb__2393940624905730053_70351647401220'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__2393940624905730053_70351647401220'
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-10 17:01:54 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.4ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 29ms (Views: 26.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-10 17:01:55 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 29ms (Views: 26.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/1/questions/31/edit" for 127.0.0.1 at 2017-08-10 17:01:57 +0800
+  
+AbstractController::ActionNotFound (The action 'edit' could not be found for QuestionsController):
+  
+actionpack (5.1.1) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.1) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.1) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/papers/1/questions/31/edit" for 127.0.0.1 at 2017-08-10 20:20:36 +0800
+  
+AbstractController::ActionNotFound (The action 'edit' could not be found for QuestionsController):
+  
+actionpack (5.1.1) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.1) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.1) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/papers/1/questions/31/edit" for 127.0.0.1 at 2017-08-10 20:20:36 +0800
+  
+AbstractController::ActionNotFound (The action 'edit' could not be found for QuestionsController):
+  
+actionpack (5.1.1) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.1) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.1) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/papers/1/questions/31/edit" for 127.0.0.1 at 2017-08-11 09:46:37 +0800
+Processing by QuestionsController#edit as HTML
+  Parameters: {"paper_id"=>"1", "id"=>"31"}
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 82ms (ActiveRecord: 4.1ms)
+
+
+  
+ActionController::UnknownFormat (QuestionsController#edit is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.1) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.1) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.1) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.1) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.1) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.1) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.1) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.1) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.1) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/papers/1/questions/31/edit" for 127.0.0.1 at 2017-08-11 09:47:58 +0800
+Processing by QuestionsController#edit as HTML
+  Parameters: {"paper_id"=>"1", "id"=>"31"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  Rendering questions/edit.html.erb within layouts/application
+  Rendered questions/edit.html.erb within layouts/application (171.9ms)
+Completed 500 Internal Server Error in 179ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `question_path' for #<#<Class:0x007ff80d969bc0>:0x007ff80d963d10>):
+    1: <%= form_for @question do |f| %>
+    2: 
+    3:     <% if @question.errors.any? %>
+    4:         <div id="error_explanation">
+  
+app/views/questions/edit.html.erb:1:in `_app_views_questions_edit_html_erb__302546185498540648_70351678296680'
+Started GET "/papers/1/questions/31/edit" for 127.0.0.1 at 2017-08-11 09:50:41 +0800
+Processing by QuestionsController#edit as HTML
+  Parameters: {"paper_id"=>"1", "id"=>"31"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `find' for #<Paper:0x007ff80929feb0>):
+  
+app/controllers/questions_controller.rb:19:in `edit'
+Started GET "/papers/1/questions/31/edit" for 127.0.0.1 at 2017-08-11 09:50:42 +0800
+Processing by QuestionsController#edit as HTML
+  Parameters: {"paper_id"=>"1", "id"=>"31"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+
+
+  
+NoMethodError (undefined method `find' for #<Paper:0x007ff809d949d8>):
+  
+app/controllers/questions_controller.rb:19:in `edit'
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-11 09:55:49 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 64ms (Views: 46.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-11 09:56:29 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-11 09:56:30 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-11 09:56:31 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-11 09:56:31 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-11 09:56:31 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-11 09:56:31 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-11 09:56:32 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-11 09:56:32 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-11 09:56:36 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (203.7ms)
+Completed 500 Internal Server Error in 208ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `question1' for #<#<Class:0x007ff80c7390e0>:0x007ff80f369610>
+Did you mean?  question
+               @questions):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to question.title, [question.paper, question1]  %>
+    4: 	<%= link_to 'edit', edit_paper_question_path(id:question) %>
+    5: <% end %>
+  
+app/views/questions/index.html.erb:3:in `block in _app_views_questions_index_html_erb__2393940624905730053_70351691927660'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__2393940624905730053_70351691927660'
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-11 09:56:36 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (189.3ms)
+Completed 500 Internal Server Error in 195ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `question1' for #<#<Class:0x007ff80c7390e0>:0x007ff80f433000>
+Did you mean?  question
+               @questions):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to question.title, [question.paper, question1]  %>
+    4: 	<%= link_to 'edit', edit_paper_question_path(id:question) %>
+    5: <% end %>
+  
+app/views/questions/index.html.erb:3:in `block in _app_views_questions_index_html_erb__2393940624905730053_70351692340480'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__2393940624905730053_70351692340480'
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-11 09:56:39 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-11 09:56:39 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 21ms (Views: 18.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-11 09:56:55 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"questions", :paper_id=>[#<Paper id: 1, name: "1", title: "1", description: "1\r\n\r\n", created_at: "2017-08-07 20:04:53", updated_at: "2017-08-07 20:04:53">, #<Question id: 31, title: "12", tag: "1", body: "1", answer: "1", created_at: "2017-08-10 01:59:18", updated_at: "2017-08-10 01:59:18", paper_id: 1>]}, missing required keys: [:id]):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to question.title, [question.paper, question]  %>
+    4: 	<%= link_to 'edit', edit_paper_question_path([question.paper, question]) %>
+    5: <% end %>
+  
+app/views/questions/index.html.erb:4:in `block in _app_views_questions_index_html_erb__2393940624905730053_70351678401460'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__2393940624905730053_70351678401460'
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-11 09:56:56 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"questions", :paper_id=>[#<Paper id: 1, name: "1", title: "1", description: "1\r\n\r\n", created_at: "2017-08-07 20:04:53", updated_at: "2017-08-07 20:04:53">, #<Question id: 31, title: "12", tag: "1", body: "1", answer: "1", created_at: "2017-08-10 01:59:18", updated_at: "2017-08-10 01:59:18", paper_id: 1>]}, missing required keys: [:id]):
+    1: <h1>paper_index</h1>
+    2: <% @questions.each do |question| %>
+    3: 	<%= link_to question.title, [question.paper, question]  %>
+    4: 	<%= link_to 'edit', edit_paper_question_path([question.paper, question]) %>
+    5: <% end %>
+  
+app/views/questions/index.html.erb:4:in `block in _app_views_questions_index_html_erb__2393940624905730053_70351695898000'
+app/views/questions/index.html.erb:2:in `_app_views_questions_index_html_erb__2393940624905730053_70351695898000'
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-11 09:57:23 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-11 09:57:44 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/1/questions/" for 127.0.0.1 at 2017-08-11 09:57:48 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/1/questions/31/edit" for 127.0.0.1 at 2017-08-11 10:07:32 +0800
+Processing by QuestionsController#edit as HTML
+  Parameters: {"paper_id"=>"1", "id"=>"31"}
+  Rendering questions/edit.html.erb within layouts/application
+  Rendered questions/edit.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <%= form_for edit_paper_question_path(id:@question.id) do |f| %>
+    2: 
+    3:     <% if @question.errors.any? %>
+    4:         <div id="error_explanation">
+  
+app/views/questions/edit.html.erb:1:in `_app_views_questions_edit_html_erb__302546185498540648_70351694614280'
+Started GET "/papers/1/questions/31/edit" for 127.0.0.1 at 2017-08-11 10:07:33 +0800
+Processing by QuestionsController#edit as HTML
+  Parameters: {"paper_id"=>"1", "id"=>"31"}
+  Rendering questions/edit.html.erb within layouts/application
+  Rendered questions/edit.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <%= form_for edit_paper_question_path(id:@question.id) do |f| %>
+    2: 
+    3:     <% if @question.errors.any? %>
+    4:         <div id="error_explanation">
+  
+app/views/questions/edit.html.erb:1:in `_app_views_questions_edit_html_erb__302546185498540648_70351652417240'
+Started GET "/papers/1/questions/31/edit" for 127.0.0.1 at 2017-08-11 10:07:34 +0800
+Processing by QuestionsController#edit as HTML
+  Parameters: {"paper_id"=>"1", "id"=>"31"}
+  Rendering questions/edit.html.erb within layouts/application
+  Rendered questions/edit.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <%= form_for edit_paper_question_path(id:@question.id) do |f| %>
+    2: 
+    3:     <% if @question.errors.any? %>
+    4:         <div id="error_explanation">
+  
+app/views/questions/edit.html.erb:1:in `_app_views_questions_edit_html_erb__302546185498540648_70351642203700'
+Started GET "/papers/1/questions/31/edit" for 127.0.0.1 at 2017-08-11 10:08:54 +0800
+Processing by QuestionsController#edit as HTML
+  Parameters: {"paper_id"=>"1", "id"=>"31"}
+  Rendering questions/edit.html.erb within layouts/application
+  Rendered questions/edit.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `paper' for nil:NilClass):
+    1: <%= form_for [@question.paper, @question] do |f| %>
+    2: 
+    3:     <% if @question.errors.any? %>
+    4:         <div id="error_explanation">
+  
+app/views/questions/edit.html.erb:1:in `_app_views_questions_edit_html_erb__302546185498540648_70351690616940'
+Started GET "/papers/1/questions/31/edit" for 127.0.0.1 at 2017-08-11 10:08:55 +0800
+Processing by QuestionsController#edit as HTML
+  Parameters: {"paper_id"=>"1", "id"=>"31"}
+  Rendering questions/edit.html.erb within layouts/application
+  Rendered questions/edit.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `paper' for nil:NilClass):
+    1: <%= form_for [@question.paper, @question] do |f| %>
+    2: 
+    3:     <% if @question.errors.any? %>
+    4:         <div id="error_explanation">
+  
+app/views/questions/edit.html.erb:1:in `_app_views_questions_edit_html_erb__302546185498540648_70351691967760'
+Started GET "/papers/1/questions/31/edit" for 127.0.0.1 at 2017-08-11 10:09:08 +0800
+Processing by QuestionsController#edit as HTML
+  Parameters: {"paper_id"=>"1", "id"=>"31"}
+  Rendering questions/edit.html.erb within layouts/application
+  Rendered questions/edit.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `paper' for nil:NilClass):
+    1: <%= form_for ['post', @question.paper, @question] do |f| %>
+    2: 
+    3:     <% if @question.errors.any? %>
+    4:         <div id="error_explanation">
+  
+app/views/questions/edit.html.erb:1:in `_app_views_questions_edit_html_erb__302546185498540648_70351667596020'
+Started GET "/papers/1/questions/31/edit" for 127.0.0.1 at 2017-08-11 10:09:09 +0800
+Processing by QuestionsController#edit as HTML
+  Parameters: {"paper_id"=>"1", "id"=>"31"}
+  Rendering questions/edit.html.erb within layouts/application
+  Rendered questions/edit.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `paper' for nil:NilClass):
+    1: <%= form_for ['post', @question.paper, @question] do |f| %>
+    2: 
+    3:     <% if @question.errors.any? %>
+    4:         <div id="error_explanation">
+  
+app/views/questions/edit.html.erb:1:in `_app_views_questions_edit_html_erb__302546185498540648_70351677626720'
+Started GET "/papers/1/questions/31/edit" for 127.0.0.1 at 2017-08-11 10:09:30 +0800
+Processing by QuestionsController#edit as HTML
+  Parameters: {"paper_id"=>"1", "id"=>"31"}
+  Rendering questions/edit.html.erb within layouts/application
+  Rendered questions/edit.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @question do |f| %>
+    2: 
+    3:     <% if @question.errors.any? %>
+    4:         <div id="error_explanation">
+  
+app/views/questions/edit.html.erb:1:in `_app_views_questions_edit_html_erb__302546185498540648_70351646643340'
+Started GET "/papers/1/questions/31/edit" for 127.0.0.1 at 2017-08-11 10:09:50 +0800
+Processing by QuestionsController#edit as HTML
+  Parameters: {"paper_id"=>"1", "id"=>"31"}
+  Rendering questions/edit.html.erb within layouts/application
+  Rendered questions/edit.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @question do |f| %>
+    2: 
+    3:     <% if @question.errors.any? %>
+    4:         <div id="error_explanation">
+  
+app/views/questions/edit.html.erb:1:in `_app_views_questions_edit_html_erb__302546185498540648_70351693091800'
+Started GET "/papers/1/questions/31/edit" for 127.0.0.1 at 2017-08-11 10:12:09 +0800
+Processing by QuestionsController#edit as HTML
+  Parameters: {"paper_id"=>"1", "id"=>"31"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  Rendering questions/edit.html.erb within layouts/application
+  Rendered questions/edit.html.erb within layouts/application (83.1ms)
+Completed 500 Internal Server Error in 110ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `question_path' for #<#<Class:0x007ff809ebb5a0>:0x007ff809eb94a8>):
+    1: <%= form_for @question do |f| %>
+    2: 
+    3:     <% if @question.errors.any? %>
+    4:         <div id="error_explanation">
+  
+app/views/questions/edit.html.erb:1:in `_app_views_questions_edit_html_erb__302546185498540648_70351647542540'
+Started GET "/papers/1/questions/31/" for 127.0.0.1 at 2017-08-11 10:24:19 +0800
+Processing by QuestionsController#show as HTML
+  Parameters: {"paper_id"=>"1", "id"=>"31"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 40ms (Views: 23.4ms | ActiveRecord: 0.9ms)
+
+
+Started PUT "/__web_console/repl_sessions/2349eb21a2b879353c80f08576655dab" for 127.0.0.1 at 2017-08-11 10:24:23 +0800
+Started GET "/papers/1/questions/31/" for 127.0.0.1 at 2017-08-11 10:24:28 +0800
+Processing by QuestionsController#show as HTML
+  Parameters: {"paper_id"=>"1", "id"=>"31"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 28ms (Views: 16.3ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/__web_console/repl_sessions/75313571f31b2c78c9e40937dfd459fb" for 127.0.0.1 at 2017-08-11 10:24:33 +0800
+Started GET "/papers/1/questions/31/" for 127.0.0.1 at 2017-08-11 10:24:44 +0800
+Processing by QuestionsController#show as HTML
+  Parameters: {"paper_id"=>"1", "id"=>"31"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 32ms (Views: 13.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/papers/1/questions/31/" for 127.0.0.1 at 2017-08-11 10:25:01 +0800
+Processing by QuestionsController#show as HTML
+  Parameters: {"paper_id"=>"1", "id"=>"31"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 37ms (Views: 21.6ms | ActiveRecord: 0.9ms)
+
+
+Started PUT "/__web_console/repl_sessions/cfd7e1e231bc66ef12c56e70e7870824" for 127.0.0.1 at 2017-08-11 10:25:04 +0800
+Started PUT "/__web_console/repl_sessions/cfd7e1e231bc66ef12c56e70e7870824" for 127.0.0.1 at 2017-08-11 10:25:06 +0800
+Started PUT "/__web_console/repl_sessions/cfd7e1e231bc66ef12c56e70e7870824" for 127.0.0.1 at 2017-08-11 10:25:09 +0800
+Started PUT "/__web_console/repl_sessions/cfd7e1e231bc66ef12c56e70e7870824" for 127.0.0.1 at 2017-08-11 10:25:11 +0800
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/papers/1/add_question" for 127.0.0.1 at 2017-08-15 10:23:40 +0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/papers/1/add_question"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/papers/1/" for 127.0.0.1 at 2017-08-15 10:23:57 +0800
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering papers/show.html.erb within layouts/application
+  Rendered papers/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 230ms (Views: 205.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/papers/1/new" for 127.0.0.1 at 2017-08-15 10:24:00 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/papers/1/new"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/papers/new" for 127.0.0.1 at 2017-08-15 10:24:36 +0800
+Processing by PapersController#new as HTML
+  Rendering papers/new.html.erb within layouts/application
+  Rendered papers/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/papers" for 127.0.0.1 at 2017-08-15 10:24:41 +0800
+Processing by PapersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nRn+0Ar42Jvo5tcq+qlnlAb02TUypSNMV/GHPSmRNCAR5IJyk032NWekCtuiIFtmtN661Sasj07kfAp1WkNXSw==", "paper"=>{"name"=>"123", "title"=>"123", "description"=>"123"}, "commit"=>"Create Paper"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "papers" ("name", "title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "123"], ["title", "123"], ["description", "123"], ["created_at", "2017-08-15 02:24:41.676195"], ["updated_at", "2017-08-15 02:24:41.676195"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/papers/2
+Completed 302 Found in 6ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/papers/2" for 127.0.0.1 at 2017-08-15 10:24:41 +0800
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering papers/show.html.erb within layouts/application
+  Rendered papers/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/papers/" for 127.0.0.1 at 2017-08-15 10:24:44 +0800
+Processing by PapersController#index as HTML
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers/2/edit" for 127.0.0.1 at 2017-08-15 10:24:46 +0800
+Processing by PapersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  Rendering papers/edit.html.erb within layouts/application
+  Rendered papers/edit.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @paper do |f| %>
+    2:  
+    3: 	<% if @paper.errors.any? %>
+    4: 		<div id="error_explanation">
+  
+app/views/papers/edit.html.erb:1:in `_app_views_papers_edit_html_erb__1650494477464546146_70233786867300'
+Started GET "/papers/2/edit" for 127.0.0.1 at 2017-08-15 10:26:02 +0800
+Processing by PapersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering papers/edit.html.erb within layouts/application
+  Rendered papers/edit.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 39ms (Views: 23.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/papers/2/edit" for 127.0.0.1 at 2017-08-15 10:26:03 +0800
+Processing by PapersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering papers/edit.html.erb within layouts/application
+  Rendered papers/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/papers/2" for 127.0.0.1 at 2017-08-15 10:26:10 +0800
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for PapersController):
+  
+actionpack (5.1.1) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.1) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.1) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/papers/2/edit" for 127.0.0.1 at 2017-08-15 10:27:29 +0800
+Processing by PapersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering papers/edit.html.erb within layouts/application
+  Rendered papers/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 35ms (Views: 18.6ms | ActiveRecord: 1.6ms)
+
+
+Started PATCH "/papers/2" for 127.0.0.1 at 2017-08-15 10:27:30 +0800
+Processing by PapersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QYX2PWzHSH5dtP6BsP3Kv4Zsh8g04fvQXXEaxFJoHmPNeIqf9XJm0NL2I3DodPZNNEbkKCDoV9Lu/JeMIbp9CA==", "paper"=>{"title"=>"123", "description"=>"123"}, "commit"=>"Update Paper", "id"=>"2"}
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `param' for #<PapersController:0x007fc128842290>
+Did you mean?  params
+               params=
+               @_params):
+  
+app/controllers/papers_controller.rb:25:in `update'
+Started PATCH "/papers/2" for 127.0.0.1 at 2017-08-15 10:28:03 +0800
+Processing by PapersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QYX2PWzHSH5dtP6BsP3Kv4Zsh8g04fvQXXEaxFJoHmPNeIqf9XJm0NL2I3DodPZNNEbkKCDoV9Lu/JeMIbp9CA==", "paper"=>{"title"=>"123", "description"=>"123"}, "commit"=>"Update Paper", "id"=>"2"}
+Completed 500 Internal Server Error in 97ms
+
+
+  
+NameError (undefined local variable or method `param' for #<PapersController:0x007fc12cb29928>
+Did you mean?  params
+               params=
+               @_params):
+  
+app/controllers/papers_controller.rb:25:in `update'
+Started PUT "/__web_console/repl_sessions/399acf189c7f82e6d58bcb215f91eb1c" for 127.0.0.1 at 2017-08-15 10:28:08 +0800
+Started GET "/papers/2" for 127.0.0.1 at 2017-08-15 10:28:20 +0800
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering papers/show.html.erb within layouts/application
+  Rendered papers/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 29ms (Views: 18.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/papers/2/edit" for 127.0.0.1 at 2017-08-15 10:28:24 +0800
+Processing by PapersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering papers/edit.html.erb within layouts/application
+  Rendered papers/edit.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/papers/2" for 127.0.0.1 at 2017-08-15 10:28:26 +0800
+Processing by PapersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"opBUBNjVaGpP5yBmeO7s+B1fH2QBgDtwXDA5iqkn9Ys+AIAQUNAgYniAoVHUp7+0uE+982Tm9Ue2433CftRDpA==", "paper"=>{"title"=>"123", "description"=>"123"}, "commit"=>"Update Paper", "id"=>"2"}
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `param' for #<PapersController:0x007fc127e61208>
+Did you mean?  params
+               params=
+               @_params):
+  
+app/controllers/papers_controller.rb:25:in `update'
+Started PUT "/__web_console/repl_sessions/e193056dc9708421d21581be3a23e43d" for 127.0.0.1 at 2017-08-15 10:28:29 +0800
+Started PUT "/__web_console/repl_sessions/e193056dc9708421d21581be3a23e43d" for 127.0.0.1 at 2017-08-15 10:28:30 +0800
+Started PUT "/__web_console/repl_sessions/e193056dc9708421d21581be3a23e43d" for 127.0.0.1 at 2017-08-15 10:28:31 +0800
+Started PATCH "/papers/2" for 127.0.0.1 at 2017-08-15 10:28:54 +0800
+Processing by PapersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"opBUBNjVaGpP5yBmeO7s+B1fH2QBgDtwXDA5iqkn9Ys+AIAQUNAgYniAoVHUp7+0uE+982Tm9Ue2433CftRDpA==", "paper"=>{"title"=>"123", "description"=>"123"}, "commit"=>"Update Paper", "id"=>"2"}
+Completed 500 Internal Server Error in 103ms
+
+
+  
+NameError (undefined local variable or method `param' for #<PapersController:0x007fc12c3bd248>
+Did you mean?  params
+               params=
+               @_params):
+  
+app/controllers/papers_controller.rb:25:in `update'
+Started PUT "/__web_console/repl_sessions/240c018cc4ddf01b9d4ab0247a4f4e37" for 127.0.0.1 at 2017-08-15 10:29:03 +0800
+Started PUT "/__web_console/repl_sessions/240c018cc4ddf01b9d4ab0247a4f4e37" for 127.0.0.1 at 2017-08-15 10:29:04 +0800
+Started PATCH "/papers/2" for 127.0.0.1 at 2017-08-15 10:30:30 +0800
+Processing by PapersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"opBUBNjVaGpP5yBmeO7s+B1fH2QBgDtwXDA5iqkn9Ys+AIAQUNAgYniAoVHUp7+0uE+982Tm9Ue2433CftRDpA==", "paper"=>{"title"=>"123", "description"=>"123"}, "commit"=>"Update Paper", "id"=>"2"}
+Completed 500 Internal Server Error in 110ms
+
+
+  
+NameError (undefined local variable or method `param' for #<PapersController:0x007fc127b92ce8>
+Did you mean?  params
+               params=
+               @_params):
+  
+app/controllers/papers_controller.rb:25:in `update'
+Started PUT "/__web_console/repl_sessions/570fbbbcc3cebe9eb1fc9d3f9b68a46b" for 127.0.0.1 at 2017-08-15 10:30:34 +0800
+Started PUT "/__web_console/repl_sessions/570fbbbcc3cebe9eb1fc9d3f9b68a46b" for 127.0.0.1 at 2017-08-15 10:30:36 +0800
+Started GET "/papers/2/edit" for 127.0.0.1 at 2017-08-15 10:30:49 +0800
+Processing by PapersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering papers/edit.html.erb within layouts/application
+  Rendered papers/edit.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 53ms (Views: 32.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/papers/2/edit" for 127.0.0.1 at 2017-08-15 10:30:49 +0800
+Processing by PapersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering papers/edit.html.erb within layouts/application
+  Rendered papers/edit.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/papers/2/edit" for 127.0.0.1 at 2017-08-15 10:33:54 +0800
+Processing by PapersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPaper Load (0.4ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering papers/edit.html.erb within layouts/application
+  Rendered papers/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 93ms (Views: 20.4ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/__web_console/repl_sessions/6e0ef5bb587f2b3cabb5d53704a3333a" for 127.0.0.1 at 2017-08-15 10:33:57 +0800
+Started PUT "/__web_console/repl_sessions/6e0ef5bb587f2b3cabb5d53704a3333a" for 127.0.0.1 at 2017-08-15 10:34:00 +0800
+Started PATCH "/papers/2" for 127.0.0.1 at 2017-08-15 10:34:15 +0800
+Processing by PapersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yQfdw1G+hAvp+obQGxUrAsHJQQUwGxvA0yn+bnGtPhxVlwnX2bvMA96dB+e3XHhOZNnjklV91fc5+rompl6IMw==", "paper"=>{"title"=>"123", "description"=>"123"}, "commit"=>"Update Paper", "id"=>"2"}
+Completed 500 Internal Server Error in 90ms
+
+
+  
+NameError (undefined local variable or method `param' for #<PapersController:0x007fc12c29fdc0>
+Did you mean?  params
+               params=
+               @_params):
+  
+app/controllers/papers_controller.rb:26:in `update'
+Started PUT "/__web_console/repl_sessions/ca3410ec502423d140ead644e41467db" for 127.0.0.1 at 2017-08-15 10:34:18 +0800
+Started PUT "/__web_console/repl_sessions/ca3410ec502423d140ead644e41467db" for 127.0.0.1 at 2017-08-15 10:34:19 +0800
+Started PATCH "/papers/2" for 127.0.0.1 at 2017-08-15 10:34:52 +0800
+Processing by PapersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yQfdw1G+hAvp+obQGxUrAsHJQQUwGxvA0yn+bnGtPhxVlwnX2bvMA96dB+e3XHhOZNnjklV91fc5+rompl6IMw==", "paper"=>{"title"=>"123", "description"=>"123"}, "commit"=>"Update Paper", "id"=>"2"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/papers/2
+Completed 302 Found in 15ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/papers/2" for 127.0.0.1 at 2017-08-15 10:34:53 +0800
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering papers/show.html.erb within layouts/application
+  Rendered papers/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 19.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/papers/2/edit" for 127.0.0.1 at 2017-08-15 10:35:04 +0800
+Processing by PapersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering papers/edit.html.erb within layouts/application
+  Rendered papers/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/papers/2/questions" for 127.0.0.1 at 2017-08-15 10:35:06 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"paper_id"=>"2"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT  "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."paper_id" = ?[0m  [["paper_id", 2]]
+  Rendered questions/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 43ms (Views: 19.2ms | ActiveRecord: 0.8ms)
+
+
