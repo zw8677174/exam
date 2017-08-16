@@ -15,6 +15,7 @@ class PapersController < ApplicationController
 
   def show
     @paper = Paper.find(params[:id])
+    @questions = @paper.questions
   end
 
   def edit

@@ -1,4 +1,5 @@
 class QuestionsController < ApplicationController
+
   def index
     @questions = Paper.find(params[:paper_id]).questions
   end
@@ -12,7 +13,6 @@ class QuestionsController < ApplicationController
   end
 
   def show
-    console
     @question = Question.find(params[:id])
   end
 
@@ -21,7 +21,8 @@ class QuestionsController < ApplicationController
   end
 
   def update
-    @question = Question
+    Question.find(params[:id]).update(question_params)
+    redirect_to url_for(paper_question_url)
   end
 
   private
