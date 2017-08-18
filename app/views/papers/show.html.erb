@@ -12,4 +12,12 @@
   <strong>Text:</strong>
   <%= @paper.description %>
 </p>
+<%= link_to '返回', papers_url %>
+<%= link_to '编辑', edit_paper_url %>
 
+
+
+
+<% @questions.each do |question| %>
+    <%= link_to question.title, paper_question_path(@paper, question) %>
+<% end %>
