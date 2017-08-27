@@ -1,15 +1,24 @@
-<%= form_for :article do |f| %>
-<p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-</p>
-
-<p>
-    <%= f.label :text %><br>
-    <%= f.text_area :text %>
-</p>
-
-<p>
-    <%= f.submit %>
-</p>
-<% end %>
+<html>
+				<head></head>
+				<body>
+					<div id="hacker-list">
+							<ul class="list">
+								<li>
+									<h3 class="name">Jonny</h3>
+									<p class="city">Stockholm</p>
+								</li>
+								<li>
+									<h3 class="name">Jonas</h3>
+									<p class="city">Berlin</p>
+								</li>
+							</ul>
+					</div>
+					<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+					<script>
+						var options = {
+				    	valueNames: [ 'name', 'city' ]
+						};
+						var hackerList = new List('hacker-list', options);
+					</script>
+				</body>
+</html>
