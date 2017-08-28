@@ -25,9 +25,8 @@
 
 <nav class="menu menu--adsila">
 	<% @questions.each do |question| %>
-    <%= link_to question.title, paper_question_path(@paper, question) %>
 		<a class="menu__item" href="<%= url_for(paper_question_path(@paper,question)) %>">
-			<span class="menu__item-name"><%= question.title %></span>
+			<span class="menu__item-name">第一题选择题<%= question.title %></span>
 			<span class="menu__item-label"><%= question.body %></span>
 		</a>
 	<% end %>

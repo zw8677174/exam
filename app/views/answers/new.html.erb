@@ -1,0 +1,17 @@
+<%= form_for([@question.paper, @question, @question.answers.build]) do |f| %>
+    <p>
+      <%= f.label :is_true %><br>
+      <%= f.text_field :is_true %>
+    </p>
+    <p>
+      <%= f.label :sign %><br>
+      <%= f.text_field :sign %>
+    </p>
+    <p>
+      <%= f.label :content %><br>
+      <%= f.text_area :content %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>

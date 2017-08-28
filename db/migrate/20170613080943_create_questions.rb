@@ -6,7 +6,7 @@ class CreateQuestions < ActiveRecord::Migration[5.1]
       t.text :body
       t.text :answer
       t.timestamps
-	  t.references :paper, foreign_key: true
+	  	t.references :paper, foreign_key: true
     end
   end
 end
