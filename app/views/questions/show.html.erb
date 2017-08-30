@@ -17,3 +17,11 @@
   <strong>Text:</strong>
   <%= @question.answer %>
 </p>
+
+<% @question.answers.each do |answer| %>
+	<p>
+		<strong>sing:</strong>
+		<%= answer.sign %>
+	</p>
+
+<% end %>

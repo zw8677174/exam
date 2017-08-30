@@ -9,3 +9,10 @@ Rails.application.load_tasks
 task :server do
   ruby './bin/rails server'
 end
+
+task :git_update do
+	sh 'git add .'
+	sh 'git commit -m "news"'
+	sh 'git pull --rebase'
+	sh 'git push'
+end

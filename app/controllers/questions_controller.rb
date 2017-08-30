@@ -13,6 +13,7 @@ class QuestionsController < ApplicationController
   end
 
   def show
+		console
     @question = Question.find(params[:id])
   end
 
