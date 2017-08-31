@@ -12,4 +12,6 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//= require lib/jquery/jquery-3.2.1.min
+//= require lib/bootstrap/bootstrap.min.js
 //= require_tree .

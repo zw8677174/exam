@@ -1,35 +1,53 @@
-<html>
-<head>
-	<link href="/static/css/paper_show/default.css" rel="stylesheet" type="text/css" /> 
-</head>
-<body>
-<p>
-  <strong>Title:</strong>
-  <%= @paper.name %>
-</p>
+<!--<%= link_to '返回', papers_url %>-->
+<!--<%= link_to '编辑', edit_paper_url %>-->
 
-<p>
-  <strong>Text:</strong>
-  <%= @paper.title %>
-</p>
+<link rel="stylesheet" type="text/css" href="/static/css/paper_show/normalize.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/paper_show/demo.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/paper_show/component.css" />
+<script src="/static/js/paper_show/modernizr.custom.25376.js"></script>
+<div id="perspective" class="perspective effect-movedown">
+  <div class="container">
+    <div class="wrapper"><!-- wrapper needed for scroll -->
+      <header class="codrops-header">
+        <h1><%= @paper.name %><span><%= @paper.title %></span></h1>
+      </header>
+      <div class="main clearfix">
+        <div class="column">
+          <p><button id="showMenu">Show Menu</button></p>
+          <p><%= @paper.description %></p>
+        </div>
+        <div class="column">
+          <nav class="codrops-demos">
+            <a href="" class="current-demo">Airbnb Effect</a>
+            <a href="" >Airbnb Effect</a>
+            <a href="" >Airbnb Effect</a>
+            <a href="" >Airbnb Effect</a>
+            <a href="" >Airbnb Effect</a>
+            <a href="" >Airbnb Effect</a>
+          </nav>
+        </div>
+      </div><!-- /main -->
+    </div><!-- wrapper -->
+    <nav class="paper-show-menu paper-show-menu--adsila">
+      <% @questions.each do |question| %>
+          <a class="paper-show-menu__item" href="<%= url_for(paper_question_path(@paper, question)) %>">
+            <span class="paper-show-menu__item-name">第一题选择题<%= question.title %></span>
+            <span class="paper-show-menu__item-label"><%= question.body %></span>
+          </a>
+      <% end %>
+    </nav>
+  </div><!-- /container -->
+  <nav class="outer-nav top horizontal">
+    <a href="<%= url_for(papers_url) %>" class="icon-home">Home</a>
+    <!--<a href="#" class="icon-news">News</a>-->
+    <!--<a href="#" class="icon-image">Images</a>-->
+    <a href="<%= url_for(edit_paper_url) %>" class="icon-upload">Edit</a>
+    <!--<a href="#" class="icon-star">Favorites</a>-->
+    <!--<a href="#" class="icon-mail">Messages</a>-->
+    <!--<a href="#" class="icon-lock">Security</a>-->
+  </nav>
+</div>
 
-<p>
-  <strong>Text:</strong>
-  <%= @paper.description %>
-</p>
-<%= link_to '返回', papers_url %>
-<%= link_to '编辑', edit_paper_url %>
 
-
-
-
-<nav class="menu menu--adsila">
-	<% @questions.each do |question| %>
-		<a class="menu__item" href="<%= url_for(paper_question_path(@paper,question)) %>">
-			<span class="menu__item-name">第一题选择题<%= question.title %></span>
-			<span class="menu__item-label"><%= question.body %></span>
-		</a>
-	<% end %>
-</nav>
-</body>
-</html>
+<script src="/static/js/paper_show/classie.js"></script>
+<script src="/static/js/paper_show/menu.js"></script>
