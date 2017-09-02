@@ -6,4 +6,5 @@ Rails.application.routes.draw do
 		end
   end
 	resources :wens
+	root 'papers#index'
 end

@@ -1,6 +1,3 @@
-<!--<%= link_to '返回', papers_url %>-->
-<!--<%= link_to '编辑', edit_paper_url %>-->
-
 <link rel="stylesheet" type="text/css" href="/static/css/paper_show/normalize.css" />
 <link rel="stylesheet" type="text/css" href="/static/css/paper_show/demo.css" />
 <link rel="stylesheet" type="text/css" href="/static/css/paper_show/component.css" />
@@ -13,17 +10,13 @@
       </header>
       <div class="main clearfix">
         <div class="column">
-          <p><button id="showMenu">Show Menu</button></p>
+          <p><button id="showMenu">目录</button></p>
           <p><%= @paper.description %></p>
         </div>
         <div class="column">
           <nav class="codrops-demos">
-            <a href="" class="current-demo">Airbnb Effect</a>
-            <a href="" >Airbnb Effect</a>
-            <a href="" >Airbnb Effect</a>
-            <a href="" >Airbnb Effect</a>
-            <a href="" >Airbnb Effect</a>
-            <a href="" >Airbnb Effect</a>
+            <a href="" class="current-demo">发送测试链接</a>
+            <a href="" >查看该试卷的测评结果</a>
           </nav>
         </div>
       </div><!-- /main -->
@@ -31,7 +24,7 @@
     <nav class="paper-show-menu paper-show-menu--adsila">
       <% @questions.each do |question| %>
           <a class="paper-show-menu__item" href="<%= url_for(paper_question_path(@paper, question)) %>">
-            <span class="paper-show-menu__item-name">第一题选择题<%= question.title %></span>
+            <span class="paper-show-menu__item-name">第一题<%= question.title %></span>
             <span class="paper-show-menu__item-label"><%= question.body %></span>
           </a>
       <% end %>
