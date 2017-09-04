@@ -1,16 +1,27 @@
-<%= form_for(@question, url:paper_question_url) do |f| %>
-
-    <p>
-      <%= f.label :title %><br>
-      <%= f.text_field :title %>
-    </p>
-
-    <p>
-      <%= f.label :tag %><br>
-      <%= f.text_area :tag %>
-    </p>
-
-    <p>
-      <%= f.submit %>
-    </p>
-<% end %>
+<link rel="stylesheet" type="text/css" href="/static/css/paper_show/normalize.css"/>
+<link rel="stylesheet" type="text/css" href="/static/css/paper_show/demo.css"/>
+<link rel="stylesheet" type="text/css" href="/static/css/paper_show/component.css"/>
+<div id="perspective" class="perspective effect-movedown">
+  <div class="container">
+    <div class="wrapper"><!-- wrapper needed for scroll -->
+      <header class="codrops-header">
+        <h1><%= @question.paper.name %><span><%= @question.paper.title %></span></h1>
+      </header>
+      <div class="main clearfix">
+        <%= form_for(@question, url: paper_question_url) do |f| %>
+            <p>
+              <%= f.label :title %><br>
+              <%= f.text_field :title %>
+            </p>
+            <p>
+              <%= f.label :tag %><br>
+              <%= f.text_area :tag %>
+            </p>
+            <p>
+              <%= f.submit %>
+            </p>
+        <% end %>
+      </div><!-- /main -->
+    </div><!-- wrapper -->
+  </div><!-- /container -->
+</div>

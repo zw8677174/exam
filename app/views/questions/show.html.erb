@@ -1,27 +1,46 @@
-<p>
-  <strong>Title:</strong>
-  <%= @question.title %>
-</p>
+<link rel="stylesheet" type="text/css" href="/static/css/paper_show/normalize.css"/>
+<link rel="stylesheet" type="text/css" href="/static/css/paper_show/demo.css"/>
+<link rel="stylesheet" type="text/css" href="/static/css/paper_show/component.css"/>
+<div id="perspective" class="perspective effect-movedown">
+  <div class="container">
+    <div class="wrapper"><!-- wrapper needed for scroll -->
+      <header class="codrops-header">
+        <h1><%= @question.paper.name %><span><%= @question.paper.title %></span></h1>
+      </header>
+      <div class="main clearfix">
+        <p>
+          <strong>标题:</strong>
+          <%= @question.title %>
+        </p>
 
-<p>
-  <strong>Text:</strong>
-  <%= @question.tag %>
-</p>
+        <p>
+          <strong>分类:</strong>
+          <%= @question.tag %>
+        </p>
 
-<p>
-  <strong>Text:</strong>
-  <%= @question.body %>
-</p>
+        <p>
+          <strong>内容:</strong>
+          <%= @question.body %>
+        </p>
 
-<p>
-  <strong>Text:</strong>
-  <%= @question.answer %>
-</p>
+        <p>
+          <strong>答案:</strong>
+          <%= @question.answer %>
+        </p>
 
-<% @question.answers.each do |answer| %>
-	<p>
-		<strong>sing:</strong>
-		<%= answer.sign %>
-	</p>
-
-<% end %>
+        <% @question.answers.each do |answer| %>
+            <p>
+              <strong>sing:</strong>
+              <%= answer.sign %>
+            </p>
+        <% end %>
+        <a href="<%= url_for edit_paper_question_path %>">
+          <button class="btn btn-warning">修改</button>
+        </a>
+        <a href="<%= url_for paper_path %>">
+          <button class="btn btn-default">确定</button>
+        </a>
+      </div><!-- /main -->
+    </div><!-- wrapper -->
+  </div><!-- /container -->
+</div>
