@@ -15,5 +15,7 @@ task :git_update do
 	sh 'git commit -m "news"'
 	sh 'git pull --rebase'
 	sh 'git push'
+	sh 'ssh root@wenwentool.site "~/tools/exam_update.sh"'
+	sh 'Zongwen123'
 end
 
