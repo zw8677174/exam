@@ -10,12 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170828080916) do
+ActiveRecord::Schema.define(version: 20170905062401) do
 
   create_table "answers", force: :cascade do |t|
-    t.boolean "is_true"
-    t.string "sign"
     t.text "content"
+    t.boolean "correct"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "question_id"
@@ -31,10 +30,7 @@ ActiveRecord::Schema.define(version: 20170828080916) do
   end
 
   create_table "questions", force: :cascade do |t|
-    t.text "title"
-    t.string "tag"
-    t.text "body"
-    t.text "answer"
+    t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "paper_id"

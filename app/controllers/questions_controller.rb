@@ -27,7 +27,7 @@ class QuestionsController < ApplicationController
 
   private
   def question_params
-    params.require(:question).permit(:title, :tag, :body, :answer, :paper_id)
+    params.require(:question).permit(:content)
   end
 
 end

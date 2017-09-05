@@ -8,6 +8,6 @@ class AnswersController < ApplicationController
 	end
 
 	def answer_params
-		params.require(:answer).permit(:is_true, :sign, :content)	
+		params.require(:answer).permit(:correct, :content)	
 	end
 end

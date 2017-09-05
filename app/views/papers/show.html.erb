@@ -23,10 +23,11 @@
       </div><!-- /main -->
     </div><!-- wrapper -->
     <nav class="paper-show-menu paper-show-menu--adsila">
+	  <% @question_index_count=0 %>
       <% @questions.each do |question| %>
           <a class="paper-show-menu__item" href="<%= url_for(paper_question_path(@paper, question)) %>">
-            <span class="paper-show-menu__item-name">第一题<%= question.title %></span>
-            <span class="paper-show-menu__item-label"><%= question.body %></span>
+				  <span class="paper-show-menu__item-name">第<%= @question_index_count+=1  %>题</span>
+				  <span class="paper-show-menu__item-label"><%= question.content %></span>
           </a>
       <% end %>
     </nav>
