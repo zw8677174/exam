@@ -28,7 +28,12 @@
           <a class="paper-show-menu__item" href="<%= url_for(paper_question_path(@paper, question)) %>">
 				  <span class="paper-show-menu__item-name">第<%= @question_index_count+=1  %>题</span>
 				  <span class="paper-show-menu__item-label"><%= question.content %></span>
-          </a>
+					</a>
+					<div class="row">
+									<% question.answers.all.each do |answer| %>
+													<span class="<%= answer.is_correct_css_class %>"><%= answer.content %>(<%= answer.is_correct %>)</span>
+									<% end %>
+					</div>
       <% end %>
     </nav>
   </div><!-- /container -->

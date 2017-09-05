@@ -18,7 +18,7 @@
       <%= f.label :content %><br>
       <%= f.text_field :content %>
     </p>
-	<%= f.select(:correct, options_for_select([['正确',1],['错误',2]])) %>
+	<%= f.select(:correct, options_for_select([['正确',1],['错误',0]])) %>
     <p>
       <%= f.submit %>
     </p>
