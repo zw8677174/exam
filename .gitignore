@@ -10,7 +10,8 @@
 /test/version_tmp/
 /tmp/
 /log/
-/db/
+/db/development.sqlite3
+.idea/*
 
 # Used by dotenv library to load environment variables.
 # .env
