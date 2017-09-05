@@ -16,3 +16,4 @@ task :git_update do
 	sh 'git pull --rebase'
 	sh 'git push'
 end
+
