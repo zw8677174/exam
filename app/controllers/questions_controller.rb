@@ -21,8 +21,9 @@ class QuestionsController < ApplicationController
   end
 
   def update
-    Question.find(params[:id]).update(question_params)
-    redirect_to url_for(paper_question_url)
+    @question = Question.find(params[:id])
+    @question.update(question_params)
+    redirect_to paper_question_url(paper_id: @question.paper_id, id: @question.id)
   end
 
   private

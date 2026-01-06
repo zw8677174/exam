@@ -4,7 +4,7 @@ class ExaminationsController < ApplicationController
 	end
 	
 	def index
-		
+		@examinations = Examination.all
 	end
 
 end
