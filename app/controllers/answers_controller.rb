@@ -4,10 +4,13 @@ class AnswersController < ApplicationController
 	end
 
 	def create
-		redirect_to url_for(paper_question_url(:id=>Question.find(params[:question_id]).answers.create(answer_params).question_id))
+		@question = Question.find(params[:question_id])
+		@question.answers.create(answer_params)
+		redirect_to paper_question_url(paper_id: @question.paper_id, id: @question.id)
 	end
 
+	private
 	def answer_params
-		params.require(:answer).permit(:correct, :content)	
+		params.require(:answer).permit(:correct, :content)
 	end
 end
